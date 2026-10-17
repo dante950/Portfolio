@@ -232,7 +232,7 @@ nav a.active {
 }
 .works-grid {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 55px;
 }
 .work {
@@ -1320,6 +1320,9 @@ body {
 
 /* HOME uses the Archive thumbnail in the existing card image area. */
 .works .work .selected-work-thumbnail {
+  height: auto;
+  aspect-ratio: 2 / 1;
+  border: 0;
   background: #e4eef5 !important;
 }
 .works .selected-work-thumbnail::before,
@@ -1332,6 +1335,20 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+.work[href="#/works/monster-hair-system"] .selected-work-thumbnail img {
+  object-position: center 45%;
+}
+.work[href="#/works/semester-event"] .selected-work-thumbnail img {
+  object-position: 85% center;
+}
+.works .work[href="#/works/stormveil"] .selected-work-thumbnail {
+  background: #fff !important;
+}
+.work[href="#/works/stormveil"] .selected-work-thumbnail img {
+  object-position: center bottom;
+  transform: scale(1.04);
+  transform-origin: center bottom;
 }
 
 /* Mobile hero stacks vertically with space reserved for its content. */

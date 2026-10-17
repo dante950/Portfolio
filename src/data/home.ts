@@ -27,7 +27,7 @@ export const projectSection = {
 export const selectedWorks = [
   { workId: "semester-event" },
   { workId: "monster-hair-system" },
-  { workId: "kingdom-rush" },
+  { workId: "monster-battle-system" },
   { workId: "stormveil" },
 ];
 export const projects = selectedWorks.flatMap(({ workId }) => {

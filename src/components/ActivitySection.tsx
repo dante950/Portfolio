@@ -1,5 +1,5 @@
 import { useRef, useState, type KeyboardEvent } from "react";
-import { communityArticles, metricsNote, researchReference } from "../data/activities";
+import { communityArticles, researchReference } from "../data/activities";
 import { mentoringActivities, recognitions, relatedStories, activitySourceUrl } from "../data/achievements";
 import { assetUrl } from "../utils/assetUrl";
 import "./ActivitySection.css";
@@ -78,7 +78,6 @@ function ResearchPanel() {
         <span className="activity-row-arrow" aria-hidden="true">↗</span>
       </a>)}
     </div>
-    <p className="activity-source-note">{metricsNote}</p>
   </>;
 }
 

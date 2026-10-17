@@ -84,9 +84,6 @@ export const communityArticles: CommunityArticle[] = [
   },
 ];
 
-export const metricsNote =
-  "조회·추천은 제공된 기록 기준이며, 기여 글의 수치는 해당 원문 전체의 반응입니다.";
-
 // 제공된 나무위키 캡처와 인벤 자모 대응표를 대조한 자료 반영 사례입니다.
 // 신규 문자 해독·보완 기여를 소개하며, 기존 표 전체의 단독 제작을 뜻하지 않습니다.
 export const researchReference = {

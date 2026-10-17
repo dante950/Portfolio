@@ -27,9 +27,9 @@ const workItems: WorkItem[] = [
   ...planningStudies.map((study, index): WorkItem => ({
     id: study.id,
     project: study.title,
-    title: ["맙소사 벌써 종강이라니 이벤트 기획", "킹덤러쉬 영웅 분석·신규 영웅 기획", "엘든링 스톰빌성 공간 분석"][index],
+    title: ["맙소사 벌써 종강이라니 이벤트 기획", "킹덤러쉬 영웅 분석·신규 영웅 기획", "엘든링 스톰빌성 레벨 분석"][index],
     // Keep paths literal so the standalone HTML exporter can embed each image.
-    thumbnail: study.image || ["/placeholders/project-01.svg", "/placeholders/project-02.svg", "/placeholders/project-03.svg"][index],
+    thumbnail: study.image || ["/planning/semester-event-cover.png", "/placeholders/project-02.svg", "/planning/stormveil-work-cover.png"][index],
     types: study.id === "stormveil" ? ["공간 분석"] : ["기획", "데이터 설계"],
     summary: study.description,
     details: [{ label: "주요 자료", value: study.tags.join(" · ") }],
@@ -38,7 +38,7 @@ const workItems: WorkItem[] = [
   {
     id: "monster-hair-system", project: "몬스터 헤어 살롱",
     title: "몬스터 미용 시스템 기획",
-    thumbnail: "/placeholders/project-04.svg", types: ["기획"],
+    thumbnail: "/planning/grooming-doc-zombie.png", types: ["기획"],
     summary: "손님의 부탁과 자유로운 꾸미기가 공존하도록, 미용 도구·부위별 판정·합산 평가와 표정 피드백을 설계했습니다.",
     details: [{ label: "관련 프로젝트", value: "몬스터 헤어 살롱" }, { label: "담당 범위", value: "미용 단계·영역·정답 조건·만족도 기획 및 시뮬레이터 검증" }, { label: "자료", value: "시스템 기획서, 데이터 테이블" }],
     body: "monster-hair-system.md",
@@ -46,7 +46,7 @@ const workItems: WorkItem[] = [
   {
     id: "monster-battle-system", project: "몬스터 헤어 살롱",
     title: "몬스터 전투 시스템 기획",
-    thumbnail: "", types: ["기획"],
+    thumbnail: "/planning/battle-doc-opening.png", types: ["기획"],
     summary: "회피와 클릭으로 빈틈을 만들고 드래그로 공격하는 전투 흐름, 몬스터별 패턴·피격 규칙과 데이터 구조를 설계했습니다.",
     details: [{ label: "관련 프로젝트", value: "몬스터 헤어 살롱" }, { label: "담당 범위", value: "전투 흐름·공격 패턴·페이즈·피격 규칙 및 데이터 구조 설계" }, { label: "자료", value: "시스템 기획서, 작업용 데이터 테이블" }],
     body: "monster-battle-system.md",

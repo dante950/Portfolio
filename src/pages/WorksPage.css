@@ -81,7 +81,7 @@
   overflow-wrap: anywhere;
 }
 .all-works-thumbnail {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 1;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -93,8 +93,22 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   min-height: 0;
+}
+.all-works-card[data-work-id="stormveil"] .all-works-thumbnail {
+  background: #fff;
+}
+.all-works-card[data-work-id="stormveil"] .all-works-thumbnail img {
+  object-position: center bottom;
+  transform: scale(1.04);
+  transform-origin: center bottom;
+}
+.all-works-card[data-work-id="monster-hair-system"] .all-works-thumbnail img {
+  object-position: center 45%;
+}
+.all-works-card[data-work-id="semester-event"] .all-works-thumbnail img {
+  object-position: 85% center;
 }
 .all-works-thumbnail span {
   padding: 24px;
