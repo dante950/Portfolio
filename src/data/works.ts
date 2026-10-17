@@ -32,7 +32,9 @@ const workItems: WorkItem[] = [
     thumbnail: study.image || ["/planning/semester-event-cover.png", "/placeholders/project-02.svg", "/planning/stormveil-work-cover.png"][index],
     types: study.id === "stormveil" ? ["공간 분석"] : ["기획", "데이터 설계"],
     summary: study.description,
-    details: [{ label: "주요 자료", value: study.tags.join(" · ") }],
+    details: study.id === "semester-event"
+      ? [{ label: "기획 대상", value: "청강 RPG · 종강 기념 글자 수집 이벤트" }, { label: "담당 범위", value: "이벤트 흐름·보상·교환·상점·UI 기획 및 데이터 구조 설계" }, { label: "자료", value: "2024년 기획서 44쪽 · Excel 8개 시트 · JSON 8개 파일" }]
+      : [{ label: "주요 자료", value: study.tags.join(" · ") }],
     body: `${study.id}.md`,
   })),
   {

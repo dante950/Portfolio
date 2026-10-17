@@ -87,11 +87,11 @@ export const planningStudies: PlanningStudy[] = [
   {
     id: "semester-event", label: "EVENT DESIGN", title: "맙소사 벌써 종강이라니",
     focus: "이벤트 기획에서 데이터까지",
-    description: "이벤트 기획을 문서로 정리하고, 데이터 테이블과 JSON 자료를 함께 구성했습니다. 기획을 문서와 데이터로 구체화한 작업입니다.",
+    description: "퀘스트로 모은 포인트를 글자 수집·교환과 종강 뱃지 보상으로 연결하고, 이벤트 UI와 8개 데이터 테이블·JSON을 설계했습니다.",
     tags: ["이벤트 기획", "데이터 테이블", "JSON"],
     image: "", imageAlt: "맙소사 벌써 종강이라니 이벤트 기획서와 데이터 테이블",
     placeholder: "기획서 · 테이블 미리보기",
-    resources: [{ label: "기획서", href: "" }, { label: "데이터 테이블", href: "" }, { label: "JSON", href: "" }],
+    resources: [{ label: "기획서", href: "/planning/semester-event-plan.pptx" }, { label: "데이터 테이블", href: "/planning/semester-event-data.xlsx" }, { label: "JSON", href: "/planning/semester-event-json.zip" }],
   },
   {
     id: "kingdom-rush", label: "HERO & DATA", title: "킹덤러쉬 영웅 기획",
