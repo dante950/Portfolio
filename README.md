@@ -1,5 +1,15 @@
 # 내 포트폴리오 템플릿
 
+## 공개 주소와 수동 배포
+
+- 포트폴리오 첫 화면: https://dante950.github.io/Portfolio/#home
+- GitHub 저장소: https://github.com/dante950/Portfolio
+- 기존 통합 시뮬레이터: https://dante950.github.io/ (별도 저장소로 유지)
+
+수정과 검수는 로컬에서 진행합니다. 공개 사이트를 업데이트할 때만 검수한 소스를 `main`에 커밋·push한 뒤, GitHub의 **Actions → Deploy portfolio to GitHub Pages → Run workflow**를 실행합니다. 로컬 수정이나 push만으로는 배포되지 않습니다. 배포에는 실행한 커밋의 파일만 포함되므로, push하지 않은 로컬 변경은 공개되지 않습니다.
+
+배포가 성공하면 위 주소에서 확인합니다. `#home`은 첫 화면 최상단, `#career`는 프로젝트 영역, `#/works`는 작업 목록입니다. 기존 `base: "./"` 설정으로 `/Portfolio/` 아래의 이미지와 상세 페이지를 연결합니다.
+
 원본의 글꼴, 스크롤 배경 전환, 이미지 콜라주를 바탕으로 만든 로컬 포트폴리오입니다. 활동과 기획·검증 영역은 제공된 경험을 반영했으며, 소개와 Selected Works에 남은 입력용 문구는 아직 실제 이력으로 교체하지 않은 틀입니다.
 
 ## 화면 열기
