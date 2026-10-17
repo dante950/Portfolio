@@ -47,8 +47,8 @@ const workItems: WorkItem[] = [
     id: "monster-battle-system", project: "몬스터 헤어 살롱",
     title: "몬스터 전투 시스템 기획",
     thumbnail: "", types: ["기획"],
-    summary: "몬스터 헤어 살롱의 야차 전투 규칙과 공격 패턴을 정리한 시스템 기획입니다.",
-    details: [{ label: "관련 프로젝트", value: "몬스터 헤어 살롱" }, { label: "자료", value: "시스템 기획서" }],
+    summary: "회피와 클릭으로 빈틈을 만들고 드래그로 공격하는 전투 흐름, 몬스터별 패턴·피격 규칙과 데이터 구조를 설계했습니다.",
+    details: [{ label: "관련 프로젝트", value: "몬스터 헤어 살롱" }, { label: "담당 범위", value: "전투 흐름·공격 패턴·페이즈·피격 규칙 및 데이터 구조 설계" }, { label: "자료", value: "시스템 기획서, 작업용 데이터 테이블" }],
     body: "monster-battle-system.md",
   },
   {

@@ -376,7 +376,8 @@
 .work-toc-title {
   flex: 1 1 0;
   min-width: 0;
-  overflow-wrap: anywhere;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 .work-toc-desktop .work-toc-detail, .work-toc-mobile .work-toc-detail { padding-left: 44px; }
 .work-toc-detail button { font-size: 11px; }
