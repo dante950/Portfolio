@@ -1,0 +1,44 @@
+node_modules/
+sites/
+.openai/
+포트폴리오 미리보기.html
+reference-source/
+reference-portfolio.zip
+.sites-runtime/
+.preview/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.local
+*.log
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+coverage/
+playwright-report/
+test-results/
+
+# Local tooling and caches
+.idea/
+.vite/
+.cache/
+.eslintcache
+.stylelintcache
+.npm/
+playwright/.cache/
+blob-report/
+# Editor backups and OS metadata
+*.swp
+*.swo
+*~
+*.bak
+Desktop.ini
+# Local credentials (never commit real secrets)
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx

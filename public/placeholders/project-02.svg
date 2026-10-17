@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Project 02 image placeholder</title>
+  <desc id="desc">A pale gray project cover with nested architectural rectangles and a dusty blue accent.</desc>
+  <rect width="1200" height="750" fill="#e9edf1"/>
+  <g fill="none" stroke="#b9c4cf" stroke-width="1">
+    <path d="M60 60H1140V690H60Z"/>
+    <path d="M60 375H1140M600 60V690" opacity=".6"/>
+    <path d="M80 60V80H60M1120 60V80H1140M80 690V670H60M1120 690V670H1140"/>
+  </g>
+  <rect x="338" y="172" width="335" height="390" fill="#9db0c4"/>
+  <rect x="425" y="218" width="398" height="314" fill="#23374e"/>
+  <rect x="469" y="262" width="310" height="226" fill="none" stroke="#b7c6d5"/>
+  <rect x="513" y="306" width="222" height="138" fill="none" stroke="#b7c6d5"/>
+  <path d="M735 306L779 262M735 444L779 488M513 306L469 262M513 444L469 488" stroke="#b7c6d5"/>
+  <circle cx="338" cy="562" r="34" fill="#627c98"/>
+  <path d="M278 562H886M338 132V602" stroke="#71869c" stroke-width="1"/>
+  <text x="92" y="120" fill="#32475e" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="3">PROJECT 02</text>
+  <text x="92" y="641" fill="#667c92" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3">IMAGE PLACEHOLDER</text>
+  <text x="1107" y="641" text-anchor="end" fill="#667c92" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3">02 / 04</text>
+</svg>

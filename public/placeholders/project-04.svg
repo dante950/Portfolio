@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Project 04 image placeholder</title>
+  <desc id="desc">A light blue project cover with a row of abstract arcs and staggered geometric forms.</desc>
+  <rect width="1200" height="750" fill="#c7d3df"/>
+  <g fill="none" stroke="#9caec0" stroke-width="1">
+    <path d="M60 60H1140V690H60Z"/>
+    <path d="M60 375H1140M600 60V690" opacity=".6"/>
+    <path d="M80 60V80H60M1120 60V80H1140M80 690V670H60M1120 690V670H1140"/>
+  </g>
+  <path d="M300 537V332A100 100 0 0 1 500 332V537Z" fill="#263b52"/>
+  <path d="M500 537V271A100 100 0 0 1 700 271V537Z" fill="#718ba5"/>
+  <path d="M700 537V393A100 100 0 0 1 900 393V537Z" fill="#e7edf3"/>
+  <path d="M335 502V332A65 65 0 0 1 465 332V502Z" fill="none" stroke="#aebfd0"/>
+  <path d="M535 502V271A65 65 0 0 1 665 271V502Z" fill="none" stroke="#d4dfe9"/>
+  <path d="M735 502V393A65 65 0 0 1 865 393V502Z" fill="none" stroke="#9aafc3"/>
+  <path d="M260 537H940" stroke="#546c85"/>
+  <path d="M400 155V191M382 173H418M800 220V256M782 238H818" stroke="#718ba5"/>
+  <text x="92" y="120" fill="#324b64" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="3">PROJECT 04</text>
+  <text x="92" y="641" fill="#5b738c" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3">IMAGE PLACEHOLDER</text>
+  <text x="1107" y="641" text-anchor="end" fill="#5b738c" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3">04 / 04</text>
+</svg>

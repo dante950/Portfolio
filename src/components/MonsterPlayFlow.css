@@ -1,0 +1,49 @@
+.play-flow-toggle { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 46px; padding: 12px 18px; border: 1px solid #afc5d6; border-radius: 8px; background: #edf3f8; color: #365c7b; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.play-flow-toggle:hover { background: #e1edf5; }
+.play-flow-toggle:focus-visible { outline: 2px solid #608dad; outline-offset: 4px; }
+.play-flow-chevron { flex-shrink: 0; transition: transform .4s ease !important; }
+.play-flow-toggle[aria-expanded="true"] .play-flow-chevron { transform: rotate(180deg); }
+.play-flow-reveal { display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows .55s cubic-bezier(.4, 0, .2, 1), opacity .35s ease, visibility 0s linear .55s !important; }
+.play-flow-reveal.is-open { grid-template-rows: 1fr; opacity: 1; visibility: visible; transition-delay: 0s !important; }
+.play-flow-clip { min-height: 0; overflow: hidden; }
+.play-flow-spacing { padding-top: 16px; }
+.play-flow { margin: 0; padding: 28px; border: 1px solid #cbd9e3; border-radius: 16px; background: #f0f5f8; }
+.play-flow > figcaption { margin-bottom: 24px; font-size: 14px; line-height: 1.8; color: #526579; }
+.play-flow-node { min-width: 0; padding: 18px 20px; border: 1px solid #c4d5e2; border-radius: 10px; background: #fbfdff; }
+.play-flow-node h3 { display: flex; align-items: center; gap: 8px; margin: 6px 0; color: #263d50; font-size: 18px; line-height: 1.5; letter-spacing: -.035em; }
+.play-flow-node p { margin: 0; font-size: 13px; line-height: 1.8; }
+.play-flow-step { display: inline-block; font: 600 12px Manrope, sans-serif; color: #607f99; letter-spacing: .08em; }
+.play-flow-condition { display: block; color: #526e83; font-size: 12px; font-weight: 700; line-height: 1.7; }
+.play-flow-opening { display: grid; grid-template-columns: 1fr 32px 1fr; align-items: center; }
+.play-flow-horizontal { text-align: center; color: #6e89a4; font-size: 22px; }
+.play-flow-arrow { display: flex; flex-direction: column; align-items: center; padding: 10px 0; gap: 2px; color: #617c91; font-size: 12px; line-height: 1.5; }
+.play-flow-arrow > :last-child { font-size: 22px; line-height: 1; }
+.play-flow-branches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.play-flow-merge { display: grid; grid-template-columns: 1fr 1fr; text-align: center; color: #6e89a4; font-size: 22px; padding: 5px 0; }
+.play-flow-positive { background: #eef6f4; border-color: #b7d5cc; }
+.play-flow-battle { background: #faf4e9; border-color: #dfcaa5; }
+.play-flow-repeat { margin-top: 12px; padding: 10px 14px; border-left: 2px solid #8da7bb; color: #526579; font-size: 12px; line-height: 1.8; }
+.play-flow-repeat > span { margin-right: 6px; }
+.play-flow-goal { border-color: #6f8da4; background: #e7eff6; }
+.play-flow-final-branches { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px; align-items: start; }
+.play-flow-goal + .play-flow-merge { grid-template-columns: 1fr 2fr; }
+.play-flow-gameover { background: #f7eeee; border-color: #ddc4c4; }
+.play-flow-gameover h3 { color: #875454; letter-spacing: .04em; }
+.play-flow-ending { background: #1c3345; border-color: #1c3345; text-align: center; }
+.play-flow-ending h3 { color: #fff; justify-content: center; letter-spacing: .12em; }
+.play-flow-ending p { color: #c4d8e6; }
+.play-flow-ending-options h3 { font-size: 15px; }
+@media (max-width: 600px) {
+  .play-flow { padding: 16px 12px; }
+  .play-flow-opening { grid-template-columns: minmax(0, 1fr); }
+  .play-flow-horizontal { transform: rotate(90deg); }
+  .play-flow-node { padding: 14px 12px; }
+  .play-flow-node h3 { font-size: 16px; flex-wrap: wrap; }
+  .play-flow-node p { font-size: 12px; }
+  .play-flow-branches { gap: 8px; }
+  .play-flow-final-branches { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .play-flow-final-path { border-left: 2px solid #8da7bb; padding-left: 12px; }
+  .play-flow-goal + .play-flow-merge { display: none; }
+  .play-flow-final-branches { margin-top: 16px; }
+  .play-flow-ending-options h3 { font-size: 14px; }
+}

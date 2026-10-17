@@ -1,0 +1,29 @@
+.career.experience-section { padding-bottom: 100px !important; scroll-margin-top: 110px; }
+.experience-section .section-head { gap: 24px; }
+.experience-section .section-head > small { letter-spacing: .02em; line-height: 1.8; }
+.experience-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.experience-card { display: flex; flex-direction: column; min-width: 0; padding: 27px 24px 22px; border: 1px solid #ccdbe5; border-radius: 14px; background: #f1f6f9; color: #253c4e; transition: transform .55s cubic-bezier(.22,.61,.36,1), box-shadow .5s ease, border-color .4s ease; }
+.experience-number { font: 600 10px/1.5 Manrope, sans-serif; letter-spacing: .07em; color: #5c7a92; }
+.experience-monogram { display: grid; place-items: center; width: 56px; height: 56px; margin: 26px 0 22px; border: 1px solid #c4d8e7; border-radius: 13px; background: #e3eef6; color: #537c9a; font: 600 12px/1.5 Manrope, sans-serif; letter-spacing: .03em; }
+.experience-card h3 { margin: 0 0 14px; font-size: 20px; line-height: 1.5; letter-spacing: -.045em; font-weight: 600; word-break: keep-all; }
+.experience-monogram-image { position: relative; overflow: hidden; background: #182a3a; }
+.experience-monogram-image img { position: absolute; width: 72px; max-width: none; height: auto; left: -8px; top: -3px; image-rendering: pixelated; }
+.experience-card .career-tags { margin: 0; }
+.experience-card > p { color: #536b7c; font-size: 12px; line-height: 1.9; word-break: keep-all; margin: 20px 0 28px; }
+.experience-open { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 17px; margin-top: auto; border-top: 1px solid #d5e2eb; font-size: 11px; color: #4f718b; }
+.experience-open > span { font-size: 23px; }
+.experience-card:focus-visible { outline: 3px solid #608dad; outline-offset: 5px; }
+@media (hover: hover) and (pointer: fine) {
+  .experience-card:hover { transform: translateY(-5px) scale(1.025); box-shadow: 0 16px 32px #243f531a; border-color: #819db3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience-card { transition: transform .45s ease, box-shadow .45s ease, border-color .4s ease !important; }
+  .experience-card:hover { transform: scale(1.015); }
+}
+@media (max-width: 1050px) { .experience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) {
+  .career.experience-section { padding-bottom: 55px !important; }
+  .experience-section .section-head { align-items: flex-start; }
+  .experience-card { padding: 24px; }
+}
+@media (max-width: 520px) { .experience-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-label="Geometric placeholder 01">
+  <rect width="240" height="240" rx="48" fill="#243a53"/>
+  <rect x="14" y="14" width="212" height="212" rx="36" fill="none" stroke="#718ba5" stroke-opacity=".4"/>
+  <path d="M70 152V98A50 50 0 0 1 170 98V152Z" fill="#d2deea"/>
+  <path d="M96 152V100A24 24 0 0 1 144 100V152Z" fill="#809bb7"/>
+  <path d="M59 166H181" stroke="#8ca4be" stroke-width="2"/>
+  <text x="120" y="203" text-anchor="middle" fill="#a9bbce" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="3">01</text>
+</svg>

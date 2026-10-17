@@ -1,0 +1,68 @@
+.tool-reading .planning-feature {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.tool-reading .planning-feature-heading { display: block; margin-bottom: 24px; }
+.tool-reading .planning-status { margin-top: 18px; }
+.tool-reading h2, .tool-reading h3, .tool-reading h4 { scroll-margin-top: 124px; }
+.tool-reading h2 {
+  margin: 0 0 24px;
+  font-size: 27px;
+  line-height: 1.5;
+  letter-spacing: -.045em;
+  word-break: keep-all;
+}
+.tool-reading .planning-feature-heading h2 { font-size: 29px; }
+.tool-reading .planning-feature-main { display: block; }
+.tool-reading .planning-tool-description,
+.tool-reading .tool-context p,
+.tool-reading .tool-feature-grid p,
+.tool-reading .tool-case > p:not(.planning-kicker),
+.tool-reading .tool-case-result p { font-size: 15px; line-height: 1.95; }
+.tool-reading .tool-context { margin-top: 24px; padding: 0; border: 0; }
+.tool-reading .tool-context h3 { font-size: 19px; margin-bottom: 10px; }
+.tool-reading .planning-feature-main > section,
+.tool-reading .tool-features,
+.tool-reading .tool-cases { margin-top: 56px; padding-top: 28px; border-top: 1px solid #cbd9e3; }
+.tool-reading .planning-video-placeholder { min-height: 0; aspect-ratio: 16 / 9; }
+.tool-reading .tool-feature-grid,
+.tool-reading .tool-case-grid { display: block; }
+.tool-reading .tool-feature-grid > div { padding: 24px 0; }
+.tool-reading .tool-feature-grid > div:first-child { border-top: 0; padding-top: 0; }
+.tool-reading .tool-feature-grid h4 { font-size: 19px; margin: 8px 0; }
+.tool-reading .tool-case { display: block; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.tool-reading .tool-case + .tool-case { margin-top: 44px; padding-top: 32px; border-top: 1px solid #d1dfe8; }
+.tool-reading .tool-case h4 { font-size: 21px; line-height: 1.5; letter-spacing: -.04em; margin: 0 0 18px; word-break: keep-all; }
+.tool-reading .tool-case figure { margin-top: 24px; }
+.tool-reading .tool-evidence-placeholder { min-height: 180px; }
+.tool-reading .planning-resources { margin-top: 32px; }
+.tool-live-preview { margin: 0; }
+.tool-live-preview img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.tool-live-preview figcaption { margin-top: 12px; color: #637c8e; font-size: 13px; line-height: 1.85; }
+.project-story-section { padding-bottom: 36px; margin-bottom: 40px; border-bottom: 1px solid #cbd9e3; }
+.project-story-section h2 { margin: 0 0 24px; font-size: 27px; line-height: 1.5; letter-spacing: -.045em; scroll-margin-top: 124px; }
+.project-story-section ul, .project-story-section ol { padding-left: 24px; margin: 20px 0 24px; }
+.project-story-section li + li { margin-top: 12px; }
+.project-story-section p, .project-story-section li { font-size: 15px; line-height: 1.95; color: #526579; }
+.project-story-section p { margin: 0 0 16px; }
+.project-story-section .project-play-flow { margin-bottom: 32px; }
+.project-play-flow strong { color: #26303a; }
+.project-play-flow li p { margin: 4px 0 0; }
+.tool-reading .project-demo-cta { margin-bottom: 28px; }
+.tool-reading .planning-feature-main > section > h3 { font-size: 23px; line-height: 1.5; margin: 0 0 24px; letter-spacing: -.045em; }
+.with-leading .work-markdown { border-top: 1px solid #cbd9e3; padding-top: 28px; }
+@media (max-width: 760px) {
+  .tool-reading .planning-feature-heading h2 { font-size: 25px; }
+  .tool-reading h2 { font-size: 23px; }
+  .tool-reading .tool-case h4 { font-size: 20px; }
+  .project-story-section h2 { font-size: 23px; }
+  .project-story-section p, .project-story-section li { font-size: 14px; }
+  .tool-reading .planning-tool-description,
+  .tool-reading .tool-context p,
+  .tool-reading .tool-feature-grid p,
+  .tool-reading .tool-case > p:not(.planning-kicker),
+  .tool-reading .tool-case-result p { font-size: 14px; }
+  .tool-reading .planning-video-placeholder { aspect-ratio: auto; min-height: 260px; }
+}

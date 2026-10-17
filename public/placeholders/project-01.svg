@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Project 01 image placeholder</title>
+  <desc id="desc">A restrained navy project cover with a pale blue circle and overlapping geometric frames.</desc>
+  <rect width="1200" height="750" fill="#18283d"/>
+  <g fill="none" stroke="#52677e" stroke-width="1">
+    <path d="M60 60H1140V690H60Z"/>
+    <path d="M600 60V690M60 375H1140" opacity=".4"/>
+    <path d="M80 60V80H60M1120 60V80H1140M80 690V670H60M1120 690V670H1140"/>
+  </g>
+  <circle cx="650" cy="329" r="167" fill="#839bb4"/>
+  <path d="M317 230H635V547H317Z" fill="#22374f" stroke="#b9c7d6" stroke-width="2"/>
+  <path d="M346 259H606V518H346Z" fill="none" stroke="#52677e"/>
+  <path d="M478 132V598M251 389H906" stroke="#d6dfe8" stroke-width="1" opacity=".5"/>
+  <circle cx="478" cy="389" r="5" fill="#d6dfe8"/>
+  <path d="M686 497H859V548H686Z" fill="#b9c7d6"/>
+  <text x="92" y="120" fill="#d6dfe8" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="3">PROJECT 01</text>
+  <text x="92" y="641" fill="#91a5bc" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3">IMAGE PLACEHOLDER</text>
+  <text x="1107" y="641" text-anchor="end" fill="#91a5bc" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="3">01 / 04</text>
+</svg>

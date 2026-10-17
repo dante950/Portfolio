@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-label="Geometric placeholder 06">
+  <rect width="240" height="240" rx="48" fill="#d0dce7"/>
+  <rect x="14" y="14" width="212" height="212" rx="36" fill="none" stroke="#91a9bf" stroke-opacity=".5"/>
+  <path d="M61 151V91H91V121H121V61H151V91H181V151Z" fill="#405c78"/>
+  <path d="M61 151H181M61 162H181" stroke="#839fb9" stroke-width="2"/>
+  <circle cx="76" cy="66" r="11" fill="#839fb9"/>
+  <text x="120" y="203" text-anchor="middle" fill="#58738f" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="3">06</text>
+</svg>

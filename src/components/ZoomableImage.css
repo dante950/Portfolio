@@ -1,0 +1,19 @@
+.screenshot-trigger { display: block; position: relative; width: 100%; padding: 0; border: 0; border-radius: 8px; overflow: hidden; background: #182a3a; cursor: zoom-in; text-align: left; }
+.screenshot-trigger img { display: block; width: 100%; height: auto; }
+.screenshot-hint { position: absolute; right: 12px; bottom: 12px; padding: 7px 11px; border: 1px solid #ffffff55; border-radius: 5px; background: #122331ed; color: #fff; font-size: 11px; line-height: 1.6; }
+.screenshot-trigger:focus-visible { outline: 3px solid #608dad; outline-offset: 4px; }
+.screenshot-dialog { width: min(1440px, calc(100vw - 40px)); max-width: none; max-height: 92dvh; padding: 0; border: 1px solid #cbd9e3; border-radius: 12px; background: #f4f8fa; color: #26303a; overflow: hidden; }
+.screenshot-dialog::backdrop { background: #08141dde; }
+.screenshot-toolbar { display: flex; align-items: center; gap: 12px; padding: 16px 20px; }
+.screenshot-toolbar p { flex: 1; margin: 0; font-size: 13px; line-height: 1.6; word-break: keep-all; overflow-wrap: anywhere; }
+.screenshot-toolbar button { flex-shrink: 0; border: 1px solid #b9cedc; border-radius: 6px; padding: 9px 12px; color: #263e51; background: #fff; cursor: pointer; font: inherit; font-size: 12px; }
+.screenshot-viewport { max-height: 75dvh; overflow: auto; background: #10212c; overscroll-behavior: contain; }
+.screenshot-viewport img { display: block; width: auto; max-width: 100%; height: auto; max-height: 75dvh; margin: auto; object-fit: contain; }
+.screenshot-viewport.is-original img { max-width: none; max-height: none; }
+.screenshot-dialog :focus-visible { outline: 3px solid #608dad; outline-offset: -3px; }
+@media (max-width: 600px) {
+  .screenshot-dialog { width: calc(100vw - 16px); }
+  .screenshot-toolbar { flex-wrap: wrap; padding: 12px; gap: 8px; }
+  .screenshot-toolbar p { flex-basis: 100%; }
+  .screenshot-hint { right: 8px; bottom: 8px; font-size: 10px; }
+}

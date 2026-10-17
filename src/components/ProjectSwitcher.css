@@ -1,0 +1,32 @@
+.work-detail .project-switcher { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; width: 100%; margin: 0 0 48px; padding: 0; align-items: stretch; }
+.project-switcher .project-switcher-card { display: flex; flex-direction: column; min-width: 0; padding: 22px 24px 18px; border: 1px solid #ccd9e2; border-radius: 14px; color: #253c4e; background: #f4f8fa; text-decoration: none; transition: transform .5s cubic-bezier(.22,.61,.36,1), box-shadow .5s ease, border-color .35s ease; }
+.project-switcher-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 24px; color: #536f85; font: 600 9px/1.6 Manrope, sans-serif; letter-spacing: .08em; }
+.project-switcher-top > span:last-child { display: grid; place-items: center; min-width: 38px; height: 32px; padding: 0 5px; border: 1px solid #cbdce8; border-radius: 7px; font-size: 9px; }
+.project-switcher-top > .project-switcher-icon:last-child { position: relative; flex-shrink: 0; width: 32px; min-width: 32px; padding: 0; overflow: hidden; background: #182a3a; }
+.project-switcher-icon img { position: absolute; width: 128.5714%; max-width: none; height: auto; left: -14.2857%; top: -5.3571%; image-rendering: pixelated; }
+.project-switcher-title { display: block; font-size: 19px; line-height: 1.55; letter-spacing: -.045em; font-weight: 600; word-break: keep-all; margin-bottom: 22px; }
+.project-switcher-state { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 1px solid #dbe4ea; color: #536f85; font-size: 10px; line-height: 1.6; }
+.project-switcher-state > span:last-child { font-size: 19px; line-height: 1; }
+.project-switcher .project-switcher-card.is-current { color: #f4f7f9; background: #182a3a; border-color: #182a3a; box-shadow: 0 12px 26px #1a314315; }
+.project-switcher-card.is-current .project-switcher-top, .project-switcher-card.is-current .project-switcher-state { color: #b6cede; }
+.project-switcher-card.is-current .project-switcher-top > span:last-child, .project-switcher-card.is-current .project-switcher-state { border-color: #385062; }
+.project-switcher-card.is-current .project-switcher-state > span:last-child { font-size: 8px; }
+.project-switcher .project-switcher-card:focus-visible { outline: 3px solid #608dad; outline-offset: 5px; }
+@media (hover: hover) and (pointer: fine) {
+  .project-switcher .project-switcher-card:hover { transform: translateY(-4px) scale(1.02); border-color: #819db3; box-shadow: 0 16px 30px #243f5320; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-switcher .project-switcher-card { transition: transform .45s ease, box-shadow .45s ease !important; }
+  .project-switcher .project-switcher-card:hover { transform: scale(1.01); }
+}
+@media (max-width: 1000px) {
+  .work-detail .project-switcher { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .work-detail .project-switcher { gap: 10px; margin-bottom: 34px; }
+  .project-switcher .project-switcher-card { padding: 15px 14px 13px; border-radius: 10px; }
+  .project-switcher-top { font-size: 8px; margin-bottom: 15px; }
+  .project-switcher-top > span:last-child { display: none; }
+  .project-switcher-title { font-size: 15px; margin-bottom: 15px; }
+  .project-switcher-state { padding-top: 11px; font-size: 9px; }
+}
