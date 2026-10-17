@@ -8,6 +8,16 @@
 
 ## 이후 작업 방식
 
+### 종강 글자 수집 이벤트 상세 배포 완료 — 2026-10-18 (한국 시간)
+
+- 사용자 요청: 여기까지 배포하고 이후 작업은 다음에 진행.
+- 배포 소스: `c8ef440d68000eb4011f11bed302b85173ffbcaa`.
+- GitHub Actions: https://github.com/dante950/Portfolio/actions/runs/39068035425 — build / deploy 모두 success.
+- 공개 상세 페이지: https://dante950.github.io/Portfolio/#/works/semester-event
+- 포함: 기획 배경·시스템 규칙·8개 테이블 구조·JSON 예시·자료 대조 내용, 원본 화면 6개, PPTX·XLSX·JSON ZIP 다운로드.
+- 검증: 공개 HTML과 최신 번들 정상 응답 및 새 본문 포함 확인. 이미지 6개와 자료 파일 3개 정상 응답. 기존 시뮬레이터 저장소와 Pages 설정 변화 없음.
+- 이 기록은 배포 이후 추가한 문서이며, 웹사이트 소스는 위 배포 커밋과 같습니다. 다음 수정은 로컬에서 진행하고 사용자가 배포를 요청할 때 게시합니다.
+
 2026-10-18 사용자 요청에 따라 앞으로의 배포 대상은 별도 GitHub 저장소 `dante950/Portfolio`의 GitHub Pages입니다. 공개 주소는 `https://dante950.github.io/Portfolio/#home`입니다. 기존 루트의 통합 시뮬레이터는 수정하지 않습니다.
 
 수정과 검수는 기존 로컬 폴더에서 진행합니다. `.github/workflows/deploy-pages.yml`은 `workflow_dispatch`로만 실행되며, 로컬 수정이나 GitHub push만으로 배포되지 않습니다. 사용자가 배포를 요청하면 검수한 소스를 GitHub에 올리고 해당 워크플로를 실행합니다. GitHub 연결 및 첫 배포 완료 여부는 아래 준비 상태를 확인합니다.
