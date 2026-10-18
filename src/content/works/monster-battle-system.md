@@ -136,8 +136,9 @@ v2.4 기획서에는 **공개 통합판 0.29의 실제 본편 캡처**와 규칙
 
 ## 기획 문서
 
-[몬스터 전투 시스템 기획서·관련 자료 보기 ↗](https://drive.google.com/drive/folders/1bFT32X04DnHuOGIwxEvHxgYtJ1LUqlYK?usp=sharing)
+| 자료 | 주요 내용 | 자료 링크 |
+| --- | --- | --- |
+| 몬스터 전투 시스템 기획서 | 회피·기본 공격·무력화·가위 공격, 패턴의 범위·시간, 취준좀비의 비석·부활과 샌즈의 하트 공략 및 전투 후 흐름 | [자료 보기 ↗](https://drive.google.com/drive/folders/1IRK1fxWtcRO5z6mZI3Anvecj-qrDjo_p?usp=drive_link) |
+| 통합 데이터 테이블 | 미용·전투 데이터를 함께 관리하는 통합본. 미용 대사 연결, 전투 패턴·페이즈·대사 연결 등 수록 | [자료 보기 ↗](https://drive.google.com/drive/folders/1nCFEAkFeIbjvcaR6lw9O6myFzRnYvEJp?usp=drive_link) |
 
-※ 몬스터 전투 시스템 관련 파일을 모아 둔 Google Drive 폴더입니다.
-
-v2.4 기획서에는 회피와 기본 공격, 무력화와 가위 공격, 패턴의 범위·시간, 취준좀비의 비석·부활과 샌즈의 하트 공략을 정리했습니다. 전투 후 방문 흐름과 현재 수치, 규칙을 수정할 위치도 함께 담았습니다.
+본문의 기획서 화면은 원본에서 발췌했으며, 표와 데이터 예시는 해당 내용을 읽기 쉽게 요약했습니다.

@@ -68,7 +68,7 @@ export default function WorkDetailPage({ route }: { route: string }) {
               alt={work.heroImageAlt ?? work.title}
             />
           )}
-          <DetailMarkdown body={body} />
+          <DetailMarkdown body={body} compactToc={work.id === "stormveil"} />
           <nav className="work-detail-pagination" aria-label="작업 이동">
             <div>
               {index > 0 && (

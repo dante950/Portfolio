@@ -30,11 +30,13 @@ const workItems: WorkItem[] = [
     title: ["맙소사 벌써 종강이라니 이벤트 기획", "킹덤러쉬 영웅 분석·신규 영웅 기획", "엘든링 스톰빌성 레벨 분석"][index],
     // Keep paths literal so the standalone HTML exporter can embed each image.
     thumbnail: study.image || ["/planning/semester-event-cover.png", "/placeholders/project-02.svg", "/planning/stormveil-work-cover.png"][index],
-    types: study.id === "stormveil" ? ["공간 분석"] : ["기획", "데이터 설계"],
+    types: study.id === "stormveil" ? ["공간 분석", "게임 분석"] : ["기획", "데이터 설계"],
     summary: study.description,
     details: study.id === "semester-event"
       ? [{ label: "기획 대상", value: "청강 RPG · 종강 기념 글자 수집 이벤트" }, { label: "담당 범위", value: "이벤트 흐름·보상·교환·상점·UI 기획 및 데이터 구조 설계" }, { label: "자료", value: "2024년 기획서 44쪽 · Excel 8개 시트 · JSON 8개 파일" }]
-      : [{ label: "주요 자료", value: study.tags.join(" · ") }],
+      : study.id === "kingdom-rush"
+        ? [{ label: "기획 대상", value: "킹덤러쉬 · 기존 영웅 이그누스 / 신규 영웅 칸" }, { label: "담당 범위", value: "영웅 역기획·캐릭터 콘셉트 및 외형 디자인·콘셉트 이미지 작화·전투 규칙·데이터 설계" }, { label: "자료", value: "이그누스 역기획서 21쪽 · 칸 기획서 17쪽 · Excel 8개 시트" }]
+        : [{ label: "분석 대상", value: "엘든링 · 스톰빌성" }, { label: "담당 범위", value: "공간 측정·도면·그레이박싱, 그래픽 문법·플레이 분석, 몬스터·아이템 데이터 정리" }, { label: "집중 플레이", value: "스톰빌성에서 70시간 이상" }, { label: "자료", value: "레벨 분석서 53쪽 · Excel 2개 시트 · 직접 제작한 도면과 플레이 기록" }],
     body: `${study.id}.md`,
   })),
   {

@@ -105,8 +105,9 @@ AI를 활용해 만든 시뮬레이터로 영역과 조건을 수정하고, 실�
 
 ## 기획 문서
 
-[몬스터 미용 시스템 기획서·관련 자료 보기 ↗](https://drive.google.com/drive/folders/1d7v98TXGISOEjHVu04bU3e6-6lChrMW1?usp=sharing)
+| 자료 | 주요 내용 | 자료 링크 |
+| --- | --- | --- |
+| 몬스터 미용 시스템 기획서 | 미용 진행·도구 조작, 부위별 판정·배점과 손님의 반응, 취준좀비·샌즈 적용 사례 및 검증·개선안 | [자료 보기 ↗](https://drive.google.com/drive/folders/1QWzEAtzmGDkzVxiYuoM-kQDSTrzDVWdX?usp=drive_link) |
+| 통합 데이터 테이블 | 미용·전투 데이터를 함께 관리하는 통합본. 미용 대사 연결, 전투 패턴·페이즈·대사 연결 등 수록 | [자료 보기 ↗](https://drive.google.com/drive/folders/1ftsnqKGYIp9mwLdwRK-go8kgmUkW29pP?usp=drive_link) |
 
-※ 몬스터 미용 시스템 관련 파일을 모아 둔 Google Drive 폴더입니다.
-
-미용 진행과 도구 조작, 부위별 판정·배점, 손님의 반응, 취준좀비·샌즈의 적용 사례를 정리했습니다. 부록에는 데이터 작성 위치, 시뮬레이터 검증 항목과 후속 개선안을 구분했습니다.
+본문의 기획서 화면은 원본에서 발췌했으며, 표와 데이터 예시는 해당 내용을 읽기 쉽게 요약했습니다.

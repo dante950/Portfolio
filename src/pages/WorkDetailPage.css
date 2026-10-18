@@ -100,6 +100,40 @@
   max-height: calc(100dvh - 140px);
   overflow-y: auto;
 }
+.with-compact-toc .work-toc-desktop {
+  max-height: none;
+  overflow: visible;
+  overflow-anchor: none;
+}
+@media (min-width: 761px) {
+  .with-compact-toc {
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 28px;
+  }
+  .with-compact-toc .work-toc-desktop ul {
+    margin-top: 12px;
+  }
+  .with-compact-toc .work-toc-desktop button {
+    padding: 3px 0;
+    line-height: 1.5;
+  }
+  .with-compact-toc .work-toc-desktop .work-toc-subitem button {
+    font-size: 11px;
+    padding: 2px 0;
+  }
+  .with-compact-toc .work-toc-desktop li:not(.work-toc-subitem) {
+    margin-top: 6px;
+  }
+  .with-compact-toc .work-toc-parent-active > button {
+    color: #365c7b;
+    font-weight: 700;
+  }
+}
+@media (max-height: 719px), (min-width: 761px) and (max-width: 1000px) {
+  .with-compact-toc .work-toc-desktop {
+    position: static;
+  }
+}
 .work-toc-desktop p,
 .work-toc-mobile summary {
   color: #6e89a4;

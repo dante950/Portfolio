@@ -142,8 +142,10 @@ NPC 교환으로 얻은 글자는 상자·열쇠에서 얻은 글자와 같은 �
 
 ## 기획 문서
 
-- [이벤트 기획서 내려받기 · PPTX](/planning/semester-event-plan.pptx) — 기획 의도, 화면별 시스템 규칙, 테이블 설명을 담은 44쪽 문서
-- [이벤트 데이터 테이블 내려받기 · XLSX](/planning/semester-event-data.xlsx) — 아이템·퀘스트·확률·상점·UI 등 8개 시트
-- [이벤트 JSON 자료 내려받기 · ZIP](/planning/semester-event-json.zip) — 제공된 8개 JSON 원본 파일
+| 자료 | 주요 내용 | 자료 링크 |
+| --- | --- | --- |
+| 이벤트 기획서 · 44쪽 | 기획 의도, 화면별 시스템 규칙, 데이터 테이블 설명 | [자료 보기 ↗](https://drive.google.com/drive/folders/12kQxAFfseEheq1f0kNx-N7CUP0Jr1snG?usp=sharing) |
+| 이벤트 데이터 · 8개 시트 | 아이템·퀘스트·확률·상점·UI 등 이벤트 데이터 | [자료 보기 ↗](https://drive.google.com/drive/folders/11JR_vDP4Z7hgyhN2raLjC328ACg_K_tn?usp=sharing) |
+| 이벤트 JSON · 8개 파일 | 이벤트 데이터의 JSON 원본 파일 | [자료 보기 ↗](https://drive.google.com/drive/folders/16BoXR5rdkQf35ASaLg2mUvJcUH1TguCY?usp=drive_link) |
 
 본문의 화면은 기획서 원본에서 발췌했으며, 표와 데이터 예시는 해당 내용을 읽기 쉽게 요약했습니다.

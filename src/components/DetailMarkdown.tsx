@@ -53,12 +53,12 @@ function firstLineCenter(element: HTMLElement) {
     + (parseFloat(style.paddingTop) || 0) + (parseFloat(style.lineHeight) || rect.height) / 2;
 }
 
-export default function DetailMarkdown({ body, leading }: { body?: string; leading?: ReactNode }) {
+export default function DetailMarkdown({ body, leading, compactToc = false }: { body?: string; leading?: ReactNode; compactToc?: boolean }) {
   const article = useRef<HTMLDivElement>(null);
   const desktopToc = useRef<HTMLElement>(null);
   const mobileToc = useRef<HTMLDetailsElement>(null);
   const [toc, setToc] = useState<
-    { id: string; label: string; level: number; number?: number }[]
+    { id: string; label: string; level: number; number?: number; sectionId: string }[]
   >([]);
   const [active, setActive] = useState("");
   useEffect(() => {
@@ -67,13 +67,18 @@ export default function DetailMarkdown({ body, leading }: { body?: string; leadi
         []),
     ];
     let sectionNumber = 0;
+    let sectionId = "";
     setToc(
-      headings.map((el) => ({
-        id: el.id,
-        label: el.dataset.toc || el.textContent || "",
-        level: Number(el.tagName.slice(1)),
-        number: el.tagName === "H2" ? ++sectionNumber : undefined,
-      })),
+      headings.map((el) => {
+        if (el.tagName === "H2") sectionId = el.id;
+        return {
+          id: el.id,
+          label: el.dataset.toc || el.textContent || "",
+          level: Number(el.tagName.slice(1)),
+          number: el.tagName === "H2" ? ++sectionNumber : undefined,
+          sectionId,
+        };
+      }),
     );
     let frame = 0;
     const update = () => {
@@ -81,6 +86,9 @@ export default function DetailMarkdown({ body, leading }: { body?: string; leadi
       const cutoff =
         (document.querySelector(".site-header")?.getBoundingClientRect()
           .bottom ?? 88) + 36;
+      const readingLine = compactToc
+        ? Math.min(cutoff + 160, window.innerHeight * 0.4)
+        : cutoff;
       let current = headings[0]?.id ?? "";
       const sidebar = desktopToc.current;
       const desktopVisible = !!sidebar?.getClientRects().length;
@@ -91,10 +99,10 @@ export default function DetailMarkdown({ body, leading }: { body?: string; leadi
         const row = rows.get(h.id);
         // Each desktop section crosses its own TOC row, in both scroll directions.
         // Hidden/offscreen rows fall back to the visible reading area.
-        if (desktopVisible && row) {
+        if (desktopVisible && row && !compactToc) {
           const line = Math.min(window.innerHeight - 24, Math.max(cutoff, firstLineCenter(row)));
           if (firstLineCenter(h) <= line + 2) current = h.id;
-        } else if (h.getBoundingClientRect().top <= Math.max(cutoff, anchorOffset) + 2) {
+        } else if (h.getBoundingClientRect().top <= Math.max(readingLine, anchorOffset) + 2) {
           current = h.id;
         }
       }
@@ -130,7 +138,7 @@ export default function DetailMarkdown({ body, leading }: { body?: string; leadi
       sidebar?.removeEventListener("scroll", schedule);
       content?.removeEventListener("load", schedule, true);
     };
-  }, [body, leading]);
+  }, [body, leading, compactToc]);
   function jump(id: string) {
     if (mobileToc.current) mobileToc.current.open = false;
     const target = document.getElementById(id);
@@ -139,7 +147,12 @@ export default function DetailMarkdown({ body, leading }: { body?: string; leadi
     const button = Array.from(sidebar?.querySelectorAll<HTMLButtonElement>("button[data-heading-id]") ?? [])
       .find(item => item.dataset.headingId === id);
     const row = button?.querySelector<HTMLElement>(".work-toc-title");
-    if (target && sidebar?.getClientRects().length && row) {
+    if (target && compactToc) {
+      // Keep section links at a consistent reading position.
+      const cutoff = (document.querySelector(".site-header")?.getBoundingClientRect().bottom ?? 88) + 36;
+      const anchorOffset = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+      window.scrollTo({ top: window.scrollY + target.getBoundingClientRect().top - Math.max(cutoff, anchorOffset), behavior });
+    } else if (target && sidebar?.getClientRects().length && row) {
       const cutoff = (document.querySelector(".site-header")?.getBoundingClientRect().bottom ?? 88) + 36;
       const stickyTop = parseFloat(getComputedStyle(sidebar).top) || 0;
       const rowOffset = firstLineCenter(row) - sidebar.getBoundingClientRect().top;
@@ -152,12 +165,17 @@ export default function DetailMarkdown({ body, leading }: { body?: string; leadi
     target?.focus({ preventScroll: true });
     setActive(id);
   }
+  const activeSectionId = toc.find(item => item.id === active)?.sectionId || toc[0]?.sectionId;
   const contents = (
     <ul>
       {toc.map((item) => (
         <li
           key={item.id}
-          className={item.level > 2 ? `work-toc-subitem${item.level > 3 ? " work-toc-detail" : ""}` : undefined}
+          className={[
+            item.level > 2 ? "work-toc-subitem" : "",
+            item.level > 3 ? "work-toc-detail" : "",
+            compactToc && item.level === 2 && item.id === activeSectionId ? "work-toc-parent-active" : "",
+          ].filter(Boolean).join(" ") || undefined}
         >
           <button
             type="button"
@@ -175,7 +193,7 @@ export default function DetailMarkdown({ body, leading }: { body?: string; leadi
     </ul>
   );
   return (
-    <div className={`work-detail-layout${toc.length ? "" : " without-toc"}${leading ? " with-leading" : ""}`}>
+    <div className={`work-detail-layout${toc.length ? "" : " without-toc"}${leading ? " with-leading" : ""}${compactToc ? " with-compact-toc" : ""}`}>
       {!!toc.length && (
         <>
           <aside className="work-toc-desktop" ref={desktopToc} aria-label="본문 목차">
