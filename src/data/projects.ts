@@ -31,7 +31,7 @@ export interface PortfolioProject {
 export const portfolioProjects: PortfolioProject[] = [
   {
     id: "monster-hair-salon", title: "몬스터 헤어 살롱", initials: "MHS",
-    icon: "/planning/monster-zombie.png",
+    icon: "/planning/mhs-project-icon.png",
     summary: "몬스터 손님을 맞아 미용과 전투를 진행하고, 하루의 영업을 마무리하는 게임입니다.",
     tags: ["PC", "Unity 6", "학교 팀 프로젝트"], heroImage: "",
     screenshots: [

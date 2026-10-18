@@ -70,7 +70,6 @@
 }
 .collage-project { color: #edf5fc; text-decoration: none; }
 .collage-project img { image-rendering: pixelated; }
-.collage-project.collage-icon-1 img { object-fit: contain; padding: 8% 12% 22%; box-sizing: border-box; background: #243a53; }
 .collage-project-caption { position: absolute; inset: auto 0 0; display: flex; align-items: center; gap: 5px; padding: 9% 7% 7%; background: linear-gradient(transparent, #0b1629ed 45%); font-size: clamp(8px, 2.1cqw, 12px); line-height: 1.5; white-space: nowrap; }
 .collage-project-caption small { color: #aac6db; font-size: .8em; }
 .collage-project-caption strong { font-weight: 600; }

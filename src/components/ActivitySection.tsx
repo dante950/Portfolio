@@ -1,6 +1,6 @@
 import { useRef, useState, type KeyboardEvent } from "react";
 import { communityArticles, researchReference } from "../data/activities";
-import { mentoringActivities, recognitions, relatedStories, activitySourceUrl } from "../data/achievements";
+import { mentoringActivities, recognitions, relatedStories } from "../data/achievements";
 import { assetUrl } from "../utils/assetUrl";
 import ZoomableImage from "./ZoomableImage";
 import "./ActivitySection.css";
@@ -112,7 +112,6 @@ function RecognitionPanel() {
     <ol className="activity-recognition-list">
       {recognitions.map((item) => <li key={item.id}><time>{item.date}</time><div><h4>{item.title}</h4><p>{item.organization}</p></div><span className="activity-recognition-kind">{item.kind}</span></li>)}
     </ol>
-    <p className="activity-source-note">포트폴리오에 기재된 이력을 기준으로 정리했습니다. <a href={activitySourceUrl} target="_blank" rel="noopener noreferrer">기록 원본 ↗</a></p>
   </>;
 }
 
