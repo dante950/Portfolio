@@ -68,6 +68,21 @@
   object-fit: cover;
   border-radius: inherit;
 }
+.collage-project { color: #edf5fc; text-decoration: none; }
+.collage-project img { image-rendering: pixelated; }
+.collage-project.collage-icon-1 img { object-fit: contain; padding: 8% 12% 22%; box-sizing: border-box; background: #243a53; }
+.collage-project-caption { position: absolute; inset: auto 0 0; display: flex; align-items: center; gap: 5px; padding: 9% 7% 7%; background: linear-gradient(transparent, #0b1629ed 45%); font-size: clamp(8px, 2.1cqw, 12px); line-height: 1.5; white-space: nowrap; }
+.collage-project-caption small { color: #aac6db; font-size: .8em; }
+.collage-project-caption strong { font-weight: 600; }
+.collage-project-caption > span { margin-left: auto; }
+.collage-project:focus-visible { outline: 2px solid #c0e5fa; outline-offset: 6px; }
+@media (max-width: 400px) {
+  .collage-icon-2 .collage-project-caption small,
+  .collage-icon-2 .collage-project-caption > span { display: none; }
+}
+@media (hover: hover) {
+  .collage-project:hover .collage-reveal { border-color: #e9f7ff; box-shadow: 0 15px 38px #0008, 0 0 32px #9bd1f24a; }
+}
 /* Deliberately irregular editorial layout. No icon rotation. */
 .collage-icon-1 {
   --size: 39%;

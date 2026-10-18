@@ -11,12 +11,16 @@ export interface MentoringActivity {
   description: string;
   tools: string[];
   role: string;
+  image: string;
+  imageAlt: string;
 }
 
 export const mentoringActivities: MentoringActivity[] = [
   {
     id: "hope-creator-5",
     program: "호프크리에이터 5기",
+    image: "/activities/hope-creator-5.png",
+    imageAlt: "호프크리에이터 5기 활동 — 팔레트 페스타 단체 사진",
     title: "Unity 게임 창작 멘토링",
     organization: "스마일게이트 희망스튜디오",
     period: "2024.08 — 2025.02",
@@ -28,9 +32,11 @@ export const mentoringActivities: MentoringActivity[] = [
   {
     id: "palette-leader-group",
     program: "팔레트 리더그룹",
+    image: "/activities/palette-leader-group.png",
+    imageAlt: "팔레트 리더그룹 활동 단체 사진",
     title: "Scratch 게임 창작 멘토링",
     organization: "스마일게이트 희망스튜디오",
-    period: "2025.04 — 2026.08",
+    period: "2025.04 — 2025.08",
     description:
       "Scratch 기반 게임 창작을 지도하고, 작품 완성과 전시를 지원했습니다.",
     tools: ["Scratch"],

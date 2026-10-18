@@ -2,6 +2,7 @@ import { useRef, useState, type KeyboardEvent } from "react";
 import { communityArticles, researchReference } from "../data/activities";
 import { mentoringActivities, recognitions, relatedStories, activitySourceUrl } from "../data/achievements";
 import { assetUrl } from "../utils/assetUrl";
+import ZoomableImage from "./ZoomableImage";
 import "./ActivitySection.css";
 
 const categories = [
@@ -91,6 +92,7 @@ function MentoringPanel() {
       {mentoringActivities.map((item, index) => <article className="activity-mentoring-card" key={item.id}>
         <div className="activity-mentoring-top"><span>0{index + 1}</span><span>{item.period}</span></div>
         <p className="activity-kicker">{item.organization}</p><h4>{item.program}</h4>
+        <div className="activity-mentor-photo"><ZoomableImage src={assetUrl(item.image)} alt={item.imageAlt} /></div>
         <p className="activity-mentor-role">{item.role}</p><p className="activity-mentor-description">{item.description}</p>
         <div className="activity-mentor-tags">{item.tools.map((tool) => <span key={tool}>{tool}</span>)}<span>게임 창작</span></div>
       </article>)}
@@ -98,7 +100,6 @@ function MentoringPanel() {
     <div className="activity-related-stories"><div><p className="activity-kicker">RELATED STORIES</p><h4>활동을 담은 이야기</h4></div>
       <div className="activity-story-links">{relatedStories.map((story) => <a key={story.url} href={story.url} target="_blank" rel="noopener noreferrer">{story.label}<span aria-hidden="true">↗</span></a>)}</div>
     </div>
-    <p className="activity-source-note">활동명과 기간은 포트폴리오 기록을 기준으로 정리했습니다. <a href={activitySourceUrl} target="_blank" rel="noopener noreferrer">기록 원본 ↗</a></p>
   </>;
 }
 

@@ -5,8 +5,8 @@ import { works } from "./works";
 export const introduction = {
   eyebrow: "PORTFOLIO / 2026",
   titleLines: [
-    { text: "Creative", accent: false },
-    { text: "Portfolio", accent: true },
+    { text: "콘텐츠를 잇고,", accent: false },
+    { text: "플레이를 설계합니다", accent: true },
   ],
   role: "시스템 · 콘텐츠 기획자",
   descriptionLines: [
@@ -46,4 +46,4 @@ export const projects = selectedWorks.flatMap(({ workId }) => {
 });
 
 // 본인 이름과 이메일을 입력하세요. 이메일을 비워 두면 연락 버튼이 비활성화됩니다.
-export const contact = { name: "이름을 입력하세요", email: "" };
+export const contact = { name: "고현정", email: "gamedesignerkoh@gmail.com" };
