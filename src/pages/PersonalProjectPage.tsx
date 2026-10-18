@@ -7,6 +7,7 @@ import {
 } from "../data/projects";
 import "./PersonalProjectPage.css";
 import MonsterProjectStory from "../components/MonsterProjectStory";
+import LunaProjectStory from "../components/LunaProjectStory";
 import ProjectSwitcher from "../components/ProjectSwitcher";
 import ZoomableImage from "../components/ZoomableImage";
 const bodies = import.meta.glob<string>("../content/personal/*.md", {
@@ -32,7 +33,7 @@ export default function PersonalProjectPage({ route }: { route: string }) {
                 <a className="work-detail-back" href="#career">← PROJECTS / 참여 프로젝트</a>
                 <h1>{project.title}</h1>
                 {!!project.screenshots?.length && (
-                  <div className="project-build-gallery" role="group" aria-label="실제 빌드 플레이 화면">
+                  <div className="project-build-gallery" role="group" aria-label="프로젝트 대표 이미지">
                     {project.screenshots.map((shot, i) => (
                       <div className="project-build-shot" key={i}>
                         {shot.src ? <ZoomableImage src={assetUrl(shot.src)} alt={shot.alt} /> : (
@@ -80,7 +81,7 @@ export default function PersonalProjectPage({ route }: { route: string }) {
                 </section>
               )}
               <DetailMarkdown
-                leading={project.id === "monster-hair-salon" ? <MonsterProjectStory /> : undefined}
+                leading={project.id === "monster-hair-salon" ? <MonsterProjectStory /> : project.id === "project-luna" ? <LunaProjectStory /> : undefined}
                 body={
                   project.body
                     ? bodies[`../content/personal/${project.body}`]

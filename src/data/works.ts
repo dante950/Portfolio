@@ -62,15 +62,8 @@ const workItems: WorkItem[] = [
     summary: "칵테일 제조 시스템 기획의 작업 내용과 문서를 준비하고 있습니다.",
     body: "cocktail-making-system.md",
   },
-  {
-    id: "bar-oasis-tutorial", project: "Bar Oasis",
-    title: "Bar Oasis 튜토리얼 분석",
-    thumbnail: "", types: ["게임 분석"],
-    summary: "Bar Oasis 튜토리얼 분석의 작업 내용과 문서를 준비하고 있습니다.",
-    body: "bar-oasis-tutorial.md",
-  },
 ];
 
 // Shared order for Work Archive, the work switcher, and previous/next navigation.
-export const works = ["semester-event", "monster-hair-system", "monster-battle-system", "cocktail-making-system", "kingdom-rush", "stormveil", "bar-oasis-tutorial"]
+export const works = ["semester-event", "monster-hair-system", "monster-battle-system", "cocktail-making-system", "kingdom-rush", "stormveil"]
   .flatMap((id) => workItems.filter((work) => work.id === id));

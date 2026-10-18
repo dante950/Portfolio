@@ -10,7 +10,7 @@ const stylePath = html.match(/<link[^>]+href="([^"]+\.css)"[^>]*>/)?.[1];
 if (!scriptPath || !stylePath) throw new Error("Build assets were not found.");
 let script = await readFile(resolve(dist, scriptPath), "utf8");
 const css = await readFile(resolve(dist, stylePath), "utf8");
-const mimeTypes = { svg: "image/svg+xml", png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", webp: "image/webp" };
+const mimeTypes = { svg: "image/svg+xml", png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", webp: "image/webp", gif: "image/gif" };
 for (const directory of ["placeholders", "activities", "planning"]) {
   for (const name of await readdir(join(dist, directory))) {
     const mime = mimeTypes[name.split(".").pop()?.toLowerCase()];

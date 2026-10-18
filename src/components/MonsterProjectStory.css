@@ -1,0 +1,29 @@
+.monster-media-label,
+.project-story-section .monster-media-label {
+  margin: 0 0 12px;
+  color: #536e85;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: .03em;
+}
+.monster-improvement-cases { margin-top: 32px; }
+.tool-reading .monster-improvement-cases h3 { margin: 0 0 18px; font-size: 21px; line-height: 1.5; letter-spacing: -.04em; word-break: keep-all; }
+.monster-before-videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+.monster-before-videos > div { min-width: 0; }
+.tool-reading .monster-before-videos .project-video { margin: 0; }
+.monster-design-points { padding-left: 22px; }
+.monster-design-points li + li { margin-top: 24px; }
+.monster-design-points strong { color: #304e64; }
+.monster-design-points p { margin: 8px 0 0; }
+.monster-tool-intro { margin-top: 44px; padding-top: 32px; border-top: 1px solid #d1dfe8; }
+.monster-tool-intro h3 { margin: 0 0 24px; font-size: 23px; line-height: 1.5; letter-spacing: -.04em; word-break: keep-all; }
+@media (max-width: 760px) {
+  .monster-before-videos { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .monster-tool-intro h3 { font-size: 20px; }
+}

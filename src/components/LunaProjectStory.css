@@ -1,0 +1,47 @@
+.luna-project-work .tool-case > h3 {
+  margin: 0 0 18px;
+  font-size: 21px;
+  line-height: 1.5;
+  letter-spacing: -.04em;
+  word-break: keep-all;
+}
+.luna-media-label,
+.project-story-section .luna-media-label {
+  margin: 28px 0 12px;
+  color: #536e85;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: .03em;
+}
+.project-story-section > .luna-media-label:first-child { margin-top: 0; }
+.luna-evidence { margin: 28px 0; }
+.luna-evidence-label { color: #526579; font-size: 12px; line-height: 1.8; }
+.luna-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 16px;
+  padding: 18px;
+  border: 1px solid #cbd9e3;
+  border-radius: 10px;
+  background: #f0f5f8;
+}
+.luna-project-work .luna-evidence-grid figure { min-width: 0; margin: 0; }
+.luna-evidence-grid .screenshot-trigger { aspect-ratio: 16 / 10; background: #e5edf2; }
+.luna-evidence-grid .screenshot-trigger img { width: 100%; height: 100%; object-fit: contain; }
+.luna-evidence-grid figcaption strong { display: block; color: #304e64; font-size: 12px; }
+.luna-evidence-grid figcaption span { display: block; margin-top: 4px; }
+.luna-evidence-overview { margin-top: 14px; border-bottom: 1px solid #d1dfe8; padding-bottom: 14px; }
+.luna-evidence-overview summary { width: fit-content; cursor: pointer; font-size: 12px; line-height: 1.8; color: #36566e; }
+.luna-evidence-overview[open] summary { margin-bottom: 16px; }
+.luna-evidence-overview summary:focus-visible { outline: 2px solid #608dad; outline-offset: 4px; }
+.luna-source-link { display: inline-block; margin-top: 16px; color: #36566e; font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+.luna-content-points { margin-top: 24px; }
+.luna-content-points .luna-evidence-label,
+.luna-content-points .luna-evidence-note { font-size: 12px; line-height: 1.8; }
+.luna-content-points .luna-evidence { margin-bottom: 0; }
+.luna-evidence-note { color: #637c8e; margin: 0 0 16px; }
+@media (max-width: 600px) {
+  .luna-evidence-grid { grid-template-columns: minmax(0, 1fr); padding: 12px; gap: 20px; }
+  .luna-project-work .tool-case > h3 { font-size: 20px; }
+}
