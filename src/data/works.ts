@@ -56,14 +56,15 @@ const workItems: WorkItem[] = [
     body: "monster-battle-system.md",
   },
   {
-    id: "cocktail-making-system", project: "칵테일 제조 시스템",
-    title: "칵테일 제조 시스템 기획",
-    thumbnail: "", types: ["기획"],
-    summary: "칵테일 제조 시스템 기획의 작업 내용과 문서를 준비하고 있습니다.",
-    body: "cocktail-making-system.md",
+    id: "lost-ark-honing", project: "로스트아크 · 2023년 역기획",
+    title: "로스트아크 장비 재련 시스템 역기획",
+    thumbnail: "/planning/lostark-honing-cover.png", types: ["기획"],
+    summary: "장비 성장과 재련의 조건, 성공·실패에 따른 변화를 분석하고, 진행 흐름과 UI 동작을 정리했습니다.",
+    details: [{ label: "분석 대상", value: "로스트아크 · 장비 재련 시스템 (2023년 서비스 기준)" }, { label: "담당 범위", value: "시스템 규칙 분석·흐름도·UI 동작 정의 및 데이터 구조 구상" }, { label: "자료", value: "2023년 역기획서 41쪽 · 시스템 흐름도·UI 명세·데이터 구조 구상안" }],
+    body: "lost-ark-honing.md",
   },
 ];
 
 // Shared order for Work Archive, the work switcher, and previous/next navigation.
-export const works = ["semester-event", "monster-hair-system", "monster-battle-system", "cocktail-making-system", "kingdom-rush", "stormveil"]
+export const works = ["semester-event", "monster-hair-system", "monster-battle-system", "lost-ark-honing", "kingdom-rush", "stormveil"]
   .flatMap((id) => workItems.filter((work) => work.id === id));
