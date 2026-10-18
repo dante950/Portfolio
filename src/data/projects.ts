@@ -13,6 +13,11 @@ export const lunaProjectVideos = {
   ui: "https://www.youtube.com/watch?v=ZlO0_8LphYM",
 };
 
+export const groceryProjectVideos = {
+  gameplay: "https://www.youtube.com/watch?v=UU7aD4w94ks",
+  boss: "https://www.youtube.com/watch?v=3SG0Wc6K3NY",
+};
+
 export interface PortfolioProject {
   id: string;
   title: string;
@@ -61,8 +66,25 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     body: "project-luna.md",
   },
+  {
+    id: "se-grocery", title: "SE:Grocery", initials: "SE",
+    summary: "마트를 무대로 전투와 이동을 이어가는 FPS. 레벨 디자인을 중심으로 콘텐츠·시스템 기획, 보스 컷씬과 사운드 디자인을 담당했습니다.",
+    tags: ["PC", "Unreal Engine 5.7.4", "FPS", "레벨 디자인"],
+    screenshots: [
+      { src: "/planning/se-wh01_4.webp", alt: "SE:Grocery 최종 반영 공간 — 선반과 플랫폼으로 구성된 시작 구역. 그래픽과 구현은 팀 공동 결과물" },
+      { src: "/planning/se-wh03_13.webp", alt: "SE:Grocery 최종 반영 공간 — 여러 높이의 플랫폼과 중앙 연결부. 그래픽과 구현은 팀 공동 결과물" },
+    ],
+    info: [
+      { label: "담당 역할", value: "메인 레벨 디자인 · 콘텐츠 / 시스템 기획" },
+      { label: "개발 기간", value: "2026.03 ~ 2026.07" },
+      { label: "엔진", value: "Unreal Engine 5.7.4" },
+      { label: "플랫폼 / 장르", value: "PC / FPS" },
+      { label: "최종 플레이 형태", value: "싱글 플레이 (멀티플레이에서 전환)" },
+      { label: "개발 상태", value: "시연 빌드 제작 후 개발 종료" },
+    ],
+    body: "se-grocery.md",
+  },
   ...[
-    { id: "se-grocery", title: "SE:Grocery", initials: "SE" },
     { id: "roulette-of-pebbles", title: "룰렛 오브 페블즈", initials: "ROP" },
   ].map((project) => ({
     ...project, summary: "프로젝트 소개와 참여 내용을 준비하고 있습니다.",

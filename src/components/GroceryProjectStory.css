@@ -1,0 +1,56 @@
+.grocery-story { min-width: 0; }
+.grocery-story .grocery-eyebrow { margin: 0 0 14px; color: #526e83; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+.grocery-story .project-video { margin-bottom: 36px; }
+.grocery-story h3 { margin: 36px 0 16px; font-size: 21px; line-height: 1.6; letter-spacing: -.035em; scroll-margin-top: 124px; }
+.grocery-shot { min-width: 0; margin: 28px 0; }
+.grocery-shot figcaption, .grocery-story .grocery-caption { margin-top: 10px; color: #5d7487; font-size: 12px; line-height: 1.8; word-break: keep-all; }
+.grocery-shot .screenshot-trigger { width: 100%; background: #e9eff4; }
+.grocery-shot .screenshot-trigger img { width: 100%; height: auto; object-fit: contain; }
+.grocery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 28px 0; }
+.grocery-grid .grocery-shot { margin: 0; }
+.grocery-scenes .screenshot-trigger { aspect-ratio: 16 / 10; }
+.grocery-scenes .screenshot-trigger img { height: 100%; }
+.grocery-docs { padding: 18px; border: 1px solid #ccd9e3; border-radius: 10px; background: #edf3f7; }
+.grocery-docs .screenshot-trigger { aspect-ratio: 1 / 1.414; background: white; }
+.grocery-docs .screenshot-trigger img { height: 100%; }
+.grocery-flow-images .screenshot-trigger { aspect-ratio: 1 / 1.1; background: white; }
+.grocery-flow-images .screenshot-trigger img { height: 100%; }
+.grocery-role-list { margin: 28px 0; border-top: 1px solid #cad8e3; }
+.grocery-role-list > div { display: grid; grid-template-columns: 120px 1fr; gap: 18px; padding: 17px 0; border-bottom: 1px solid #cad8e3; }
+.grocery-role-list dt { font-size: 13px; font-weight: 700; color: #304e64; line-height: 1.9; }
+.grocery-role-list dd { margin: 0; font-size: 14px; color: #526579; line-height: 1.9; }
+.grocery-note { margin: 28px 0; padding: 22px 24px; border-left: 3px solid #6d8b9e; background: #edf3f7; }
+.grocery-note > strong { display: block; font-size: 14px; color: #304e64; margin-bottom: 10px; }
+.grocery-story .grocery-note p { margin: 0; font-size: 14px; }
+.grocery-route-panel { margin: 28px 0; padding: 28px; background: #203c50; border-radius: 12px; color: #f7fafc; }
+.grocery-route-panel .grocery-eyebrow { color: #bdd6e6; }
+.grocery-story .grocery-route-summary { color: #fff; font-size: 23px; font-weight: 700; letter-spacing: -.02em; }
+.grocery-story .grocery-route { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; list-style: none; margin: 24px 0 0; padding: 0; }
+.grocery-story .grocery-route li { min-width: 0; border-top: 1px solid #587386; padding-top: 16px; margin: 0; }
+.grocery-route span, .grocery-route strong, .grocery-route b { display: block; }
+.grocery-route span { color: #b3cbdc; font-size: 9px; letter-spacing: .04em; }
+.grocery-route strong { color: #fff; font-size: 28px; line-height: 1.6; }
+.grocery-route b { color: #e5f0f8; font-size: 13px; font-weight: 500; }
+.grocery-story .grocery-route p { margin: 8px 0 0; color: #c0d2df; font-size: 12px; line-height: 1.85; word-break: keep-all; }
+.grocery-details { margin: 24px 0 32px; border-block: 1px solid #cbd9e3; padding: 16px 0; }
+.grocery-details summary { cursor: pointer; color: #36566e; font-size: 13px; line-height: 1.8; }
+.grocery-details summary:focus-visible { outline: 2px solid #608dad; outline-offset: 4px; }
+.grocery-details[open] summary { margin-bottom: 20px; }
+.grocery-work-overview { margin: 18px 0; padding: 18px; border: 1px solid #cbd9e3; border-radius: 9px; background: #f0f5f8; }
+.grocery-work-overview summary { font-weight: 600; }
+.grocery-overview-count { display: inline-block; margin-left: 12px; padding: 2px 8px; border-radius: 4px; background: #e0eaf1; color: #4e6b80; font-size: 11px; font-weight: 500; white-space: nowrap; }
+.grocery-work-overview .grocery-caption { margin: 16px 0; }
+.grocery-work-overview .grocery-shot { margin: 18px 0 0; }
+.grocery-story .grocery-status { padding: 10px 14px; border: 1px solid #bfcfdb; border-radius: 6px; color: #395a71; font-size: 12px; }
+@media (max-width: 700px) {
+  .grocery-story .grocery-route { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .grocery-route-panel { padding: 22px; }
+  .grocery-story .grocery-route-summary { font-size: 20px; }
+  .grocery-role-list > div { grid-template-columns: 1fr; gap: 6px; }
+}
+@media (max-width: 600px) {
+  .grocery-grid { grid-template-columns: 1fr; gap: 24px; }
+  .grocery-docs { padding: 12px; }
+  .grocery-story h3 { font-size: 19px; }
+  .grocery-note { padding: 18px; }
+}
