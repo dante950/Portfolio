@@ -77,6 +77,9 @@
 .collage-project-caption > span { margin-left: auto; }
 .collage-icon-4 .collage-project-caption { font-size: clamp(8px, 1.7cqw, 10px); }
 .collage-icon-4 .collage-project-caption small { display: none; }
+.collage-icon-5.collage-project img { image-rendering: auto; }
+.collage-icon-5 .collage-project-caption { font-size: clamp(7px, 1.5cqw, 9px); white-space: normal; }
+.collage-icon-5 .collage-project-caption small, .collage-icon-5 .collage-project-caption > span { display: none; }
 .collage-project:focus-visible { outline: 2px solid #c0e5fa; outline-offset: 6px; }
 @media (max-width: 400px) {
   .collage-icon-2 .collage-project-caption small,

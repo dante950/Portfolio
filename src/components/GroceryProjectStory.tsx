@@ -1,3 +1,4 @@
+import ProjectDisclosure from "./ProjectDisclosure";
 import { groceryProjectVideos } from "../data/projects";
 import { assetUrl } from "../utils/assetUrl";
 import ProjectVideo from "./ProjectVideo";
@@ -9,11 +10,10 @@ function Shot({ src, caption }: { src: string; caption: string }) {
   return <figure className="grocery-shot"><ZoomableImage src={assetUrl(src)} alt={caption} /><figcaption>{caption}</figcaption></figure>;
 }
 function WorkOverview({ title, count, src, description }: { title: string; count: number; src: string; description: string }) {
-  return <details className="grocery-details grocery-work-overview">
-    <summary><span>{title} · 통합 이미지 펼쳐 보기</span><span className="grocery-overview-count">{count}개 화면</span></summary>
+  return <ProjectDisclosure title={`${title} · 통합 이미지 펼쳐 보기`}>
     <p className="grocery-caption">{description} 이미지를 누르면 확대할 수 있고, ‘원본 크기’에서 세부 내용을 확인할 수 있습니다.</p>
     <Shot src={src} caption={`${title} · ${count}개 화면 통합. 각 이미지 하단에 원본 문서·페이지 또는 파일명 표기`} />
-  </details>;
+  </ProjectDisclosure>;
 }
 const finalRoute = [
   { code: "A-1", type: "START · STATIC", title: "조작 학습", detail: "선형 진행 속에서 전투와 점프·대시를 경험하는 시작 구역" },
@@ -33,7 +33,7 @@ export default function GroceryProjectStory() {
       <dl className="grocery-role-list">
         <div><dt>주 담당</dt><dd>레벨 구조·동선 설계, Unreal Engine 그레이박싱, 시연 구간 구성</dd></div>
         <div><dt>콘텐츠·시스템</dt><dd>벤트·PIT ROOM 및 기능 오브젝트 기획, 세이프존·셔터문·스코어보드·랜덤 맵 생성 설계</dd></div>
-        <div><dt>연출·사운드</dt><dd>Sequencer를 활용한 포도 보스 컷씬 제작, BGM을 제외한 게임 전체 사운드 디자인</dd></div>
+        <div><dt>연출·사운드</dt><dd>Sequencer를 활용한 포도 보스 컷씬 제작, BGM·캐릭터 보이스를 제외한 게임 내 사운드 디자인</dd></div>
       </dl>
       <div className="grocery-note"><strong>기획 범위와 최종 결과</strong><p>이 페이지의 레벨·시스템 문서는 개발 과정의 설계 기록입니다. 멀티플레이를 전제로 설계한 시스템 중에는 최종 빌드에 반영되지 못한 작업이 있습니다. 최종 플레이 영상과 그래픽이 적용된 화면은 팀 공동 결과물이며, 제 담당 영역은 별도로 설명했습니다.</p></div>
     </section>
@@ -66,14 +66,13 @@ export default function GroceryProjectStory() {
         <p className="grocery-route-summary">A-1 → B-3 → B-2 → BOSS</p>
         <ol className="grocery-route" aria-label="최종 레벨 진행 순서">{finalRoute.map(item => <li key={item.code}><span>{item.type}</span><strong>{item.code}</strong><b>{item.title}</b><p>{item.detail}</p></li>)}</ol>
       </div>
-      <details className="grocery-details">
-        <summary>초기 계획과 최종 축소 표시 비교</summary>
+      <ProjectDisclosure title="초기 계획과 최종 축소 표시 비교">
         <p>초기 계획: A-1 → A-2 → SAFE ZONE → B-1 → B-2 → B-3 → SAFE ZONE → B-4 BOSS</p>
         <div className="grocery-grid grocery-flow-images">
           <Shot src="/planning/se-flow-planned.webp" caption="초기 전체 플로우 · 전투 구역과 정비 구간을 포함한 계획" />
           <Shot src="/planning/se-flow-marked.webp" caption="최종 축소 범위를 표시한 자료 · 최종 순서는 A-1 → B-3 → B-2 → BOSS" />
         </div>
-      </details>
+      </ProjectDisclosure>
       <h3 id="grocery-final-level" data-toc="게임에 반영된 공간">그레이박스에서 실제 플레이 공간으로</h3>
       <p>선별한 레벨 구조에 팀의 그래픽과 구현이 더해진 화면입니다. 저는 공간 구성과 그레이박싱을 담당했으며, 아래 이미지는 최종 반영 자료에서 발췌했습니다.</p>
       <div className="grocery-grid grocery-scenes">
@@ -123,9 +122,9 @@ export default function GroceryProjectStory() {
       <p>Unreal Engine Sequencer를 하루 동안 독학해 포도 보스 컷씬을 제작했습니다. 컷씬 제작과 해당 장면의 사운드 디자인을 함께 담당해 보스 등장 연출을 완성했습니다.</p>
       <p className="grocery-eyebrow">MY CONTRIBUTION · 컷씬 제작 + 사운드 디자인</p>
       <ProjectVideo title="포도 보스 컷씬 — 직접 제작한 컷씬과 사운드 디자인" youtubeUrl={groceryProjectVideos.boss} />
-      <details className="grocery-details"><summary>Sequencer 작업 화면 보기</summary><Shot src="/planning/se-doc-sequencer.webp" caption="UE 시퀀스 보스전 컷씬 제작 기록 · Sequencer 편집 화면" /></details>
-      <h3 id="grocery-sound" data-toc="BGM을 제외한 사운드">게임 전체의 행동과 상태를 소리로 연결했습니다.</h3>
-      <p>BGM을 제외한 게임 내 사운드 디자인을 담당했습니다. 무기와 캐릭터, 몬스터·보스의 행동뿐 아니라 웨이브 전조, 셔터문, 서비스 박스와 킬 콤보 등 플레이의 상태 변화를 전달하는 소리를 작업했습니다.</p>
+      <ProjectDisclosure title="Sequencer 작업 화면 보기"><Shot src="/planning/se-doc-sequencer.webp" caption="UE 시퀀스 보스전 컷씬 제작 기록 · Sequencer 편집 화면" /></ProjectDisclosure>
+      <h3 id="grocery-sound" data-toc="게임 내 사운드 디자인">게임 전체의 행동과 상태를 소리로 연결했습니다.</h3>
+      <p>BGM·캐릭터 보이스를 제외한 게임 내 사운드 디자인을 담당했습니다. 무기와 캐릭터, 몬스터·보스의 행동뿐 아니라 웨이브 전조, 셔터문, 서비스 박스와 킬 콤보 등 플레이의 상태 변화를 전달하는 소리를 작업했습니다.</p>
       <dl className="grocery-role-list">
         <div><dt>전투 피드백</dt><dd>무기 발사·장전, 캐릭터 스킬, 몬스터의 공격과 사망</dd></div>
         <div><dt>보스의 행동</dt><dd>쇼크웨이브, 투사체 발사·착지, 이동, 부패액 공격 전조와 발사</dd></div>

@@ -1,6 +1,9 @@
 import { featuredTool } from "../data/planning";
 import AiToolShowcase from "./AiToolShowcase";
 import ProjectVideo from "./ProjectVideo";
+import ProjectDisclosure from "./ProjectDisclosure";
+import ZoomableImage from "./ZoomableImage";
+import { assetUrl } from "../utils/assetUrl";
 import { monsterProjectVideos } from "../data/projects";
 import "./MonsterProjectStory.css";
 
@@ -34,6 +37,22 @@ export default function MonsterProjectStory() {
       <p>{featuredTool.role.description}</p>
     </section>
     <AiToolShowcase />
+    <section className="project-story-section" aria-labelledby="monster-evidence-title">
+      <h2 id="monster-evidence-title" data-toc="기획·검증 자료 모아보기">기획·검증 자료 모아보기</h2>
+      <p>미용과 전투의 규칙을 설명한 도식, 시뮬레이터 플레이·편집 화면을 주제별로 모았습니다. 이미지를 누른 뒤 ‘원본 크기’로 전환하면 세부 내용을 확인할 수 있습니다.</p>
+      <ProjectDisclosure title="미용 조작·손님별 요구·반응 설계 · 통합 이미지 펼쳐 보기">
+        <p>가위 조작, 손님별 형태 손질, 색·무늬·장식과 만족도 표현을 연결한 기획 도식과 시뮬레이터 캡처입니다.</p>
+        <ZoomableImage src={assetUrl("/planning/monster-gallery-grooming.svg")} alt="몬스터 미용 설계 통합 이미지 — 도구 조작, 손님별 요구, 평가와 반응" />
+      </ProjectDisclosure>
+      <ProjectDisclosure title="전투 흐름·몬스터 기믹·파훼 설계 · 통합 이미지 펼쳐 보기">
+        <p>기본 공격과 무력화, 빈틈 조작, 취준좀비·샌즈의 공략 규칙과 미용에서 전투로 이어지는 흐름을 모았습니다.</p>
+        <ZoomableImage src={assetUrl("/planning/monster-gallery-battle.svg")} alt="몬스터 전투 설계 통합 이미지 — 전투 반복, 가위 판정, 몬스터별 기믹과 파훼" />
+      </ProjectDisclosure>
+      <ProjectDisclosure title="통합 시뮬레이터 편집·플레이 · 통합 이미지 펼쳐 보기">
+        <p>미용 영역과 전투 패턴, 대사를 편집하고 본편 플레이와 하루 마감을 확인하는 팀 협업 도구의 화면입니다.</p>
+        <ZoomableImage src={assetUrl("/planning/monster-gallery-simulator.svg")} alt="통합 시뮬레이터 활용 화면 — 미용·전투·대사 편집, 본편 플레이와 하루 마감" />
+      </ProjectDisclosure>
+    </section>
   </>;
 }
 

@@ -9,6 +9,7 @@ import "./PersonalProjectPage.css";
 import MonsterProjectStory from "../components/MonsterProjectStory";
 import LunaProjectStory from "../components/LunaProjectStory";
 import GroceryProjectStory from "../components/GroceryProjectStory";
+import FablesProjectStory from "../components/FablesProjectStory";
 import ProjectSwitcher from "../components/ProjectSwitcher";
 import ZoomableImage from "../components/ZoomableImage";
 const bodies = import.meta.glob<string>("../content/personal/*.md", {
@@ -82,7 +83,7 @@ export default function PersonalProjectPage({ route }: { route: string }) {
                 </section>
               )}
               <DetailMarkdown
-                leading={project.id === "monster-hair-salon" ? <MonsterProjectStory /> : project.id === "project-luna" ? <LunaProjectStory /> : project.id === "se-grocery" ? <GroceryProjectStory /> : undefined}
+                leading={project.id === "monster-hair-salon" ? <MonsterProjectStory /> : project.id === "project-luna" ? <LunaProjectStory /> : project.id === "se-grocery" ? <GroceryProjectStory /> : project.id === "roulette-of-pebbles" ? <FablesProjectStory /> : undefined}
                 body={
                   project.body
                     ? bodies[`../content/personal/${project.body}`]

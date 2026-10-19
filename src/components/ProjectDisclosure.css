@@ -1,0 +1,32 @@
+.project-disclosure {
+  margin: 16px 0;
+  padding: 0;
+  border: 1px solid #cbd9e3;
+  border-radius: 9px;
+  background: #f0f5f8;
+  min-width: 0;
+}
+.project-disclosure > summary {
+  padding: 17px 18px;
+  color: #36566e;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.8;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.project-disclosure > summary:focus-visible {
+  outline: 2px solid #608dad;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+.project-disclosure[open] > summary { border-bottom: 1px solid #d8e2e9; }
+.project-disclosure-content { padding: 18px; }
+.project-disclosure .project-disclosure-content > :first-child { margin-top: 0; }
+.project-disclosure .project-disclosure-content > :last-child { margin-bottom: 0; }
+.project-disclosure-content > p { color: #637c8e; font-size: 13px; line-height: 1.85; }
+.project-disclosure-content > .screenshot-trigger { margin-top: 16px; }
+@media (max-width: 600px) {
+  .project-disclosure > summary { padding: 14px; }
+  .project-disclosure-content { padding: 14px; }
+}

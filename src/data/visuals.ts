@@ -4,6 +4,6 @@ export const heroImages = [
   { image: "/planning/luna-project-icon.png", label: "Project LUNA", href: "#/projects/project-luna" },
   { image: "/placeholders/icon-03.svg", label: "" },
   { image: "/planning/se-project-icon.png", label: "SE:Grocery", href: "#/projects/se-grocery", projectNumber: 3 },
-  { image: "/placeholders/icon-05.svg", label: "" },
+  { image: "/planning/rof-project-icon.webp", label: "Roulette of Fables", href: "#/projects/roulette-of-pebbles", projectNumber: 4 },
   { image: "/placeholders/icon-06.svg", label: "" },
 ];

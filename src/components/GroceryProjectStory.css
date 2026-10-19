@@ -32,15 +32,6 @@
 .grocery-route strong { color: #fff; font-size: 28px; line-height: 1.6; }
 .grocery-route b { color: #e5f0f8; font-size: 13px; font-weight: 500; }
 .grocery-story .grocery-route p { margin: 8px 0 0; color: #c0d2df; font-size: 12px; line-height: 1.85; word-break: keep-all; }
-.grocery-details { margin: 24px 0 32px; border-block: 1px solid #cbd9e3; padding: 16px 0; }
-.grocery-details summary { cursor: pointer; color: #36566e; font-size: 13px; line-height: 1.8; }
-.grocery-details summary:focus-visible { outline: 2px solid #608dad; outline-offset: 4px; }
-.grocery-details[open] summary { margin-bottom: 20px; }
-.grocery-work-overview { margin: 18px 0; padding: 18px; border: 1px solid #cbd9e3; border-radius: 9px; background: #f0f5f8; }
-.grocery-work-overview summary { font-weight: 600; }
-.grocery-overview-count { display: inline-block; margin-left: 12px; padding: 2px 8px; border-radius: 4px; background: #e0eaf1; color: #4e6b80; font-size: 11px; font-weight: 500; white-space: nowrap; }
-.grocery-work-overview .grocery-caption { margin: 16px 0; }
-.grocery-work-overview .grocery-shot { margin: 18px 0 0; }
 .grocery-story .grocery-status { padding: 10px 14px; border: 1px solid #bfcfdb; border-radius: 6px; color: #395a71; font-size: 12px; }
 @media (max-width: 700px) {
   .grocery-story .grocery-route { grid-template-columns: repeat(2,minmax(0,1fr)); }

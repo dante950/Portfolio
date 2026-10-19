@@ -1,3 +1,4 @@
+import ProjectDisclosure from "./ProjectDisclosure";
 import { lunaProjectVideos } from "../data/projects";
 import { assetUrl } from "../utils/assetUrl";
 import ProjectVideo from "./ProjectVideo";
@@ -63,16 +64,14 @@ function EvidenceBoard({ title, shots, overview, overviewCaption, extraOverview 
         <figcaption><strong>{shot.label}</strong><span>{shot.description}</span></figcaption>
       </figure>)}
     </div>
-    {overview && <details className="luna-evidence-overview">
-      <summary>전체 통합 이미지 펼쳐 보기</summary>
+    {overview && <ProjectDisclosure title="전체 통합 이미지 펼쳐 보기">
       {overviewCaption && <p className="luna-evidence-note">{overviewCaption}</p>}
       <ZoomableImage src={assetUrl(overview)} alt={`${title} 전체 통합 이미지`} />
-    </details>}
-    {extraOverview && <details className="luna-evidence-overview">
-      <summary>{extraOverview.label}</summary>
+    </ProjectDisclosure>}
+    {extraOverview && <ProjectDisclosure title={extraOverview.label}>
       <p className="luna-evidence-note">{extraOverview.description}</p>
       <ZoomableImage src={assetUrl(extraOverview.image)} alt={extraOverview.description} />
-    </details>}
+    </ProjectDisclosure>}
   </div>;
 }
 
