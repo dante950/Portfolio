@@ -127,7 +127,7 @@ export default function GameCollage() {
               draggable={false}
               decoding="async"
             />
-            {item.href && <span className="collage-project-caption"><small>0{index + 1}</small><strong>{item.label}</strong><span aria-hidden="true">↗</span></span>}
+            {item.href && <span className="collage-project-caption"><small>0{item.projectNumber ?? index + 1}</small><strong>{item.label}</strong><span aria-hidden="true">↗</span></span>}
           </div>
         </Tile>;
       })}

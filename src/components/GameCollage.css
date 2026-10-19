@@ -70,10 +70,13 @@
 }
 .collage-project { color: #edf5fc; text-decoration: none; }
 .collage-project img { image-rendering: pixelated; }
+.collage-icon-4.collage-project img { image-rendering: auto; }
 .collage-project-caption { position: absolute; inset: auto 0 0; display: flex; align-items: center; gap: 5px; padding: 9% 7% 7%; background: linear-gradient(transparent, #0b1629ed 45%); font-size: clamp(8px, 2.1cqw, 12px); line-height: 1.5; white-space: nowrap; }
 .collage-project-caption small { color: #aac6db; font-size: .8em; }
 .collage-project-caption strong { font-weight: 600; }
 .collage-project-caption > span { margin-left: auto; }
+.collage-icon-4 .collage-project-caption { font-size: clamp(8px, 1.7cqw, 10px); }
+.collage-icon-4 .collage-project-caption small { display: none; }
 .collage-project:focus-visible { outline: 2px solid #c0e5fa; outline-offset: 6px; }
 @media (max-width: 400px) {
   .collage-icon-2 .collage-project-caption small,

@@ -68,6 +68,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     id: "se-grocery", title: "SE:Grocery", initials: "SE",
+    icon: "/planning/se-project-icon.png",
     summary: "마트를 무대로 전투와 이동을 이어가는 FPS. 레벨 디자인을 중심으로 콘텐츠·시스템 기획, 보스 컷씬과 사운드 디자인을 담당했습니다.",
     tags: ["PC", "Unreal Engine 5.7.4", "FPS", "레벨 디자인"],
     screenshots: [
