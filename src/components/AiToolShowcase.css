@@ -34,10 +34,13 @@
 .tool-reading .tool-feature-grid h4 { font-size: 19px; margin: 8px 0; }
 .tool-reading .tool-case { display: block; padding: 0; border: 0; border-radius: 0; background: transparent; }
 .tool-reading .tool-case + .tool-case { margin-top: 44px; padding-top: 32px; border-top: 1px solid #d1dfe8; }
-.tool-reading .tool-case h4 { font-size: 21px; line-height: 1.5; letter-spacing: -.04em; margin: 0 0 18px; word-break: keep-all; }
+.tool-reading .tool-case :is(h3, h4) { font-size: 21px; line-height: 1.5; letter-spacing: -.04em; margin: 0 0 18px; word-break: keep-all; }
 .tool-reading .tool-case figure { margin-top: 24px; }
 .tool-reading .tool-evidence-placeholder { min-height: 180px; }
 .tool-reading .planning-resources { margin-top: 32px; }
+.tool-reading .tool-team-handoff { margin-top: 32px; padding: 22px 24px; border-radius: 8px; background: #edf4f8; }
+.tool-reading .tool-team-handoff h3 { margin: 0 0 10px; color: #304e64; font-size: 19px; line-height: 1.5; letter-spacing: -.035em; }
+.tool-reading .tool-team-handoff p { margin: 0; color: #526579; font-size: 15px; line-height: 1.95; word-break: keep-all; }
 .tool-live-preview { margin: 0; }
 .tool-live-preview img { display: block; width: 100%; height: auto; border-radius: 8px; }
 .tool-live-preview figcaption { margin-top: 12px; color: #637c8e; font-size: 13px; line-height: 1.85; }
@@ -56,7 +59,7 @@
 @media (max-width: 760px) {
   .tool-reading .planning-feature-heading h2 { font-size: 25px; }
   .tool-reading h2 { font-size: 23px; }
-  .tool-reading .tool-case h4 { font-size: 20px; }
+  .tool-reading .tool-case :is(h3, h4) { font-size: 20px; }
   .project-story-section h2 { font-size: 23px; }
   .project-story-section p, .project-story-section li { font-size: 14px; }
   .tool-reading .planning-tool-description,
@@ -64,5 +67,7 @@
   .tool-reading .tool-feature-grid p,
   .tool-reading .tool-case > p:not(.planning-kicker),
   .tool-reading .tool-case-result p { font-size: 14px; }
+  .tool-reading .tool-team-handoff { padding: 20px; }
+  .tool-reading .tool-team-handoff p { font-size: 14px; }
   .tool-reading .planning-video-placeholder { aspect-ratio: auto; min-height: 260px; }
 }

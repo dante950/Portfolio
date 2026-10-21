@@ -5,7 +5,7 @@ import "./ExperienceSection.css";
 export default function ExperienceSection() {
   return <section className="career experience-section" id="career" aria-labelledby="experience-heading">
     <div className="shell">
-      <div className="section-head"><div><small>01 / PROJECTS</small><h2 id="experience-heading">Experience</h2></div><small>카드를 눌러 참여 프로젝트를 살펴보세요</small></div>
+      <div className="section-head"><div><small>01 / PROJECTS</small><h2 id="experience-heading">Experience</h2></div></div>
       <div className="experience-grid">
         {portfolioProjects.map((project, index) => <a className="experience-card" key={project.id} href={projectHref(project.id)}>
           <span className="experience-number">0{index + 1} / 04</span>

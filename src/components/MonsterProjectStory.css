@@ -1,29 +1,33 @@
-.monster-media-label,
-.project-story-section .monster-media-label {
-  margin: 0 0 12px;
-  color: #536e85;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.8;
-  letter-spacing: .03em;
-}
-.monster-improvement-cases { margin-top: 32px; }
-.tool-reading .monster-improvement-cases h3 { margin: 0 0 18px; font-size: 21px; line-height: 1.5; letter-spacing: -.04em; word-break: keep-all; }
-.monster-before-videos {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  margin: 24px 0;
-}
-.monster-before-videos > div { min-width: 0; }
-.tool-reading .monster-before-videos .project-video { margin: 0; }
-.monster-design-points { padding-left: 22px; }
-.monster-design-points li + li { margin-top: 24px; }
+.project-story-section .monster-gameplay-label { margin: 0 0 12px; color: #536e85; font-size: 11px; font-weight: 600; letter-spacing: .06em; }
+.monster-role-section h3 { margin: 32px 0 18px; font-size: 21px; line-height: 1.5; letter-spacing: -.04em; word-break: keep-all; }
+.monster-role-section h2 + h3 { margin-top: 0; }
+.monster-role-section .monster-design-points { padding-left: 22px; margin-bottom: 0; }
+.monster-role-section .monster-design-points li + li { margin-top: 24px; }
 .monster-design-points strong { color: #304e64; }
-.monster-design-points p { margin: 8px 0 0; }
-.monster-tool-intro { margin-top: 44px; padding-top: 32px; border-top: 1px solid #d1dfe8; }
-.monster-tool-intro h3 { margin: 0 0 24px; font-size: 23px; line-height: 1.5; letter-spacing: -.04em; word-break: keep-all; }
+.monster-role-section .monster-design-points p { margin: 8px 0 0; }
+.project-story-section.monster-evidence-section { border-bottom: 0; padding-bottom: 0; margin-bottom: 32px; }
+.monster-simulator-hero { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 40px; margin: 24px 0 32px; padding: 24px 0; border-block: 1px solid #cbd9e3; }
+.monster-simulator-hero .monster-simulator-kicker { margin: 0 0 18px; color: #536e85; font: 650 10px/1.5 "Manrope", sans-serif; letter-spacing: .12em; }
+.monster-simulator-hero h2 { margin: 0; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.5; letter-spacing: -.055em; word-break: keep-all; }
+.monster-simulator-hero .monster-simulator-description { margin: 20px 0 24px; color: #526579; font-size: 14px; line-height: 1.95; word-break: keep-all; }
+.monster-simulator-description strong { color: #304e64; font-weight: 600; }
+.monster-simulator-play { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 20px; border-radius: 6px; background: #182a3a; color: #f5f9fc; font-size: 14px; font-weight: 600; transition: background .2s; }
+.monster-simulator-play:hover { background: #29475c; }
+.monster-simulator-play:focus-visible { outline: 3px solid #608dad; outline-offset: 4px; }
+.monster-simulator-play > span[aria-hidden] { font-size: 22px; line-height: 1; }
+.monster-simulator-video { min-width: 0; }
+.monster-simulator-video .project-video { margin: 0; }
+.monster-simulator-background { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; padding: 28px 0 8px; border-top: 1px solid #cbd9e3; }
+.monster-simulator-background h3 { margin: 0 0 12px; color: #263b4c; font-size: 18px; line-height: 1.6; letter-spacing: -.035em; }
+.monster-simulator-background p { margin: 0; color: #526579; font-size: 14px; line-height: 1.95; word-break: keep-all; }
+.monster-simulator-background p + p { margin-top: 12px; }
+@media (max-width: 1000px) {
+  .monster-simulator-hero { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .monster-simulator-copy { max-width: 640px; }
+}
 @media (max-width: 760px) {
-  .monster-before-videos { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .monster-tool-intro h3 { font-size: 20px; }
+  .monster-simulator-hero { margin: 24px 0 28px; padding: 24px 0; }
+  .monster-simulator-hero h2 { font-size: 25px; }
+  .monster-role-section h3 { font-size: 20px; }
+  .monster-simulator-background { grid-template-columns: minmax(0, 1fr); gap: 24px; }
 }

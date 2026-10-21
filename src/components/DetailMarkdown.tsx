@@ -53,6 +53,13 @@ function firstLineCenter(element: HTMLElement) {
     + (parseFloat(style.paddingTop) || 0) + (parseFloat(style.lineHeight) || rect.height) / 2;
 }
 
+// Account for the project selector as well as the global header when reading or jumping.
+function readingCutoff(element: HTMLElement | null) {
+  const headerBottom = document.querySelector(".site-header")?.getBoundingClientRect().bottom ?? 88;
+  const switcher = element?.closest(".personal-detail")?.querySelector(".project-switcher");
+  return Math.max(headerBottom, switcher?.getBoundingClientRect().bottom ?? 0) + 36;
+}
+
 export default function DetailMarkdown({ body, leading, compactToc = false }: { body?: string; leading?: ReactNode; compactToc?: boolean }) {
   const article = useRef<HTMLDivElement>(null);
   const desktopToc = useRef<HTMLElement>(null);
@@ -83,9 +90,7 @@ export default function DetailMarkdown({ body, leading, compactToc = false }: { 
     let frame = 0;
     const update = () => {
       frame = 0;
-      const cutoff =
-        (document.querySelector(".site-header")?.getBoundingClientRect()
-          .bottom ?? 88) + 36;
+      const cutoff = readingCutoff(article.current);
       const readingLine = compactToc
         ? Math.min(cutoff + 160, window.innerHeight * 0.4)
         : cutoff;
@@ -149,11 +154,11 @@ export default function DetailMarkdown({ body, leading, compactToc = false }: { 
     const row = button?.querySelector<HTMLElement>(".work-toc-title");
     if (target && compactToc) {
       // Keep section links at a consistent reading position.
-      const cutoff = (document.querySelector(".site-header")?.getBoundingClientRect().bottom ?? 88) + 36;
+      const cutoff = readingCutoff(article.current);
       const anchorOffset = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
       window.scrollTo({ top: window.scrollY + target.getBoundingClientRect().top - Math.max(cutoff, anchorOffset), behavior });
     } else if (target && sidebar?.getClientRects().length && row) {
-      const cutoff = (document.querySelector(".site-header")?.getBoundingClientRect().bottom ?? 88) + 36;
+      const cutoff = readingCutoff(article.current);
       const stickyTop = parseFloat(getComputedStyle(sidebar).top) || 0;
       const rowOffset = firstLineCenter(row) - sidebar.getBoundingClientRect().top;
       const line = Math.min(window.innerHeight - 24, Math.max(cutoff, stickyTop + rowOffset));

@@ -1,5 +1,5 @@
 export const monsterProjectVideos = {
-  gameplay: "https://www.youtube.com/watch?v=O-70TVuT1L4",
+  gameplay: "https://www.youtube.com/watch?v=tN1210jo_FQ",
   beforeGrooming: "https://www.youtube.com/watch?v=xVAsG9mAgfo",
   beforeBattle: "https://www.youtube.com/watch?v=iqcf42R9J44",
   simulator: "https://www.youtube.com/watch?v=AHj7lhXeWC8",
@@ -45,8 +45,8 @@ export const portfolioProjects: PortfolioProject[] = [
     summary: "몬스터 손님을 맞아 미용과 전투를 진행하고, 하루의 영업을 마무리하는 게임입니다.",
     tags: ["PC", "Unity 6", "학교 팀 프로젝트"], heroImage: "",
     screenshots: [
-      { src: "/planning/monster-build-salon.png", alt: "몬스터 손님과 미용사가 있는 미용실 전경 — 몬스터 헤어 살롱 실제 빌드 플레이 화면" },
-      { src: "/planning/monster-build-battle.png", alt: "샌즈와 야차를 진행하는 전투 장면 — 몬스터 헤어 살롱 실제 빌드 플레이 화면" },
+      { src: "/planning/monster-build-salon-20261021.png", alt: "몬스터 손님과 미용사가 있는 미용실 전경 — 몬스터 헤어 살롱 실제 빌드 플레이 화면" },
+      { src: "/planning/monster-build-battle-20261021.png", alt: "마왕 부하와 야차를 진행하는 전투 장면 — 몬스터 헤어 살롱 실제 빌드 플레이 화면" },
     ],
     info: [
       { label: "담당 역할", value: "게임 루프·미용·전투 시스템 기획 · 통합 시뮬레이터 제작" },

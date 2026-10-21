@@ -7,6 +7,7 @@ import {
 } from "../data/projects";
 import "./PersonalProjectPage.css";
 import MonsterProjectStory from "../components/MonsterProjectStory";
+import MonsterSimulatorHero from "../components/MonsterSimulatorHero";
 import LunaProjectStory from "../components/LunaProjectStory";
 import GroceryProjectStory from "../components/GroceryProjectStory";
 import FablesProjectStory from "../components/FablesProjectStory";
@@ -34,6 +35,7 @@ export default function PersonalProjectPage({ route }: { route: string }) {
               <header className="work-detail-intro">
                 <a className="work-detail-back" href="#career">← PROJECTS / 참여 프로젝트</a>
                 <h1>{project.title}</h1>
+                {project.id === "monster-hair-salon" && <MonsterSimulatorHero />}
                 {!!project.screenshots?.length && (
                   <div className="project-build-gallery" role="group" aria-label="프로젝트 대표 이미지">
                     {project.screenshots.map((shot, i) => (

@@ -5,8 +5,8 @@ import { works } from "./works";
 export const introduction = {
   eyebrow: "PORTFOLIO / 2026",
   titleLines: [
-    { text: "콘텐츠를 잇고,", accent: false },
-    { text: "플레이를 설계합니다", accent: true },
+    { text: "Game Content", accent: false },
+    { text: "Designer", accent: true },
   ],
   role: "시스템 · 콘텐츠 기획자",
   descriptionLines: [

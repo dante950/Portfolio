@@ -1050,16 +1050,16 @@ div[id] {
   display: block;
 }
 .top-dark .hero h1 {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: min(56px, 9.3cqw);
-  line-height: 1.4;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(44px, 7vw, 110px);
+  line-height: 1.08;
   letter-spacing: -.065em;
 }
 @media (min-width: 761px) {
   .hero-intro {
     container-type: inline-size;
   }
-  .hero h1 {
+  .top-dark .hero h1 {
     font-size: min(clamp(58px, 7vw, 110px), 16cqw);
   }
   .hero-title-line {
@@ -1393,7 +1393,7 @@ body {
 }
 @media (max-width: 760px) {
   .top-dark .hero h1 {
-    font-size: clamp(25px, 6.9vw, 48px);
+    font-size: clamp(36px, 12vw, 72px);
     margin: clamp(24px, 4svh, 36px) 0 28px;
   }
   .top-dark .hero .ko {

@@ -9,28 +9,6 @@
   font: 650 10px/1.5 "Manrope", "Noto Sans KR", sans-serif;
   letter-spacing: .14em;
 }
-.activity-section-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 32px;
-}
-.activity-section-heading h2 {
-  margin: 0;
-  font-size: clamp(28px, 3vw, 42px);
-  line-height: 1.45;
-  letter-spacing: -.055em;
-  font-weight: 600;
-}
-.activity-section-heading > p {
-  margin: 0 0 4px;
-  font-size: 13px;
-  line-height: 1.9;
-  color: #4c6274;
-  word-break: keep-all;
-}
-.activity-section-heading > p span { color: #768895; font-size: 12px; }
 .activity-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .activity-section .activity-tab {
   appearance: none;
@@ -50,14 +28,13 @@
 .activity-tab :is(.activity-tab-top > span, svg, .activity-tab-description, .activity-tab-bottom, .activity-tab-bottom > span:last-child) { transition: color .35s ease, border-color .35s ease; }
 .activity-tab-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 22px; }
 .activity-tab-top > span { font: 600 9px/1.6 "Manrope", sans-serif; letter-spacing: .13em; color: #6a8398; }
-.activity-tab-top svg { width: 42px; height: 42px; flex: 0 0 42px; color: #6c8ca8; }
 .activity-tab-title { display: block; font-size: 22px; line-height: 1.5; letter-spacing: -.055em; font-weight: 650; }
 .activity-tab-description { display: block; white-space: pre-line; word-break: keep-all; margin-top: 12px; font-size: 12px; line-height: 1.85; color: #637888; }
 .activity-tab-bottom { display: flex; justify-content: space-between; gap: 12px; align-items: center; border-top: 1px solid #dbe4ea; padding-top: 17px; margin-top: 27px; font-size: 10px; color: #718596; }
 .activity-tab-bottom > span:last-child { font-size: 22px; line-height: 1; color: #7695ae; }
 .activity-section .activity-tab.is-active { background: #182a3a; border-color: #182a3a; color: #f4f7f9; box-shadow: 0 12px 30px #1a314315; }
 .activity-tab.is-active .activity-tab-description { color: #b6c7d4; }
-.activity-tab.is-active .activity-tab-top > span, .activity-tab.is-active .activity-tab-top svg { color: #a4bdd1; }
+.activity-tab.is-active .activity-tab-top > span { color: #a4bdd1; }
 .activity-tab.is-active .activity-tab-bottom { border-color: #385062; color: #a8c0d2; }
 .activity-tab.is-active .activity-tab-bottom > span:last-child { color: #c9deec; }
 @media (hover: hover) and (pointer: fine) {
@@ -89,10 +66,10 @@
   border: 1px solid #d6e1e8;
   border-radius: 16px;
 }
-.activity-panel-intro { display: flex; justify-content: space-between; gap: 24px; align-items: flex-end; margin-bottom: 30px; }
-.activity-panel-intro h3 { font-size: 24px; font-weight: 600; letter-spacing: -.055em; line-height: 1.5; margin: 0; }
-.activity-panel-intro > p { font-size: 12px; line-height: 1.9; color: #768794; margin: 0; word-break: keep-all; }
-.activity-panel-intro strong { font-weight: 500; color: #4f6e85; }
+.activity-panel-intro { margin-bottom: 28px; }
+.activity-panel-intro h3 { font-size: clamp(24px, 2.5vw, 30px); font-weight: 650; letter-spacing: -.055em; line-height: 1.5; margin: 0; word-break: keep-all; }
+.activity-panel-intro .activity-panel-description { font-size: 14px; line-height: 1.9; color: #536b7c; margin: 12px 0 0; word-break: keep-all; }
+.activity-panel-intro strong { font-weight: 650; color: #304e64; }
 .activity-feature { display: grid; grid-template-columns: 1fr 1.15fr; border: 1px solid #dbe5ec; background: #f3f7fa; border-radius: 10px; overflow: hidden; }
 .activity-feature-image { position: relative; min-height: 320px; overflow: hidden; background: #d9e4ea; }
 .activity-feature-image img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .4s ease; }
@@ -180,12 +157,8 @@
   .activity-section .activity-tab { padding: 22px; }
   .activity-tab-top { gap: 7px; }
   .activity-tab-top > span { font-size: 8px; }
-  .activity-tab-top svg { width: 32px; height: 32px; flex-basis: 32px; }
   .activity-tab-title { font-size: 20px; }
   .activity-tab-description { font-size: 11px; }
-  .activity-section-heading, .activity-panel-intro { align-items: flex-start; }
-  .activity-section-heading > p { max-width: 300px; }
-  .activity-panel-intro { flex-direction: column; gap: 12px; }
   .activity-panel { padding: 28px; }
   .activity-feature-body { padding: 24px; }
   .activity-article-row { grid-template-columns: 140px 1fr 20px; gap: 20px; }
@@ -193,20 +166,18 @@
 }
 @media (max-width: 760px) {
   .activity-section { padding: 42px 0 54px; scroll-margin-top: 102px; }
-  .activity-section-heading { flex-direction: column; gap: 18px; margin-bottom: 25px; }
-  .activity-section-heading > p { max-width: none; font-size: 12px; }
   .activity-tabs { gap: 8px; }
   .activity-section .activity-tab { padding: 14px 11px; border-radius: 9px; }
   .activity-tab-top { margin-bottom: 15px; }
   .activity-tab-top > span { font-size: 8px; letter-spacing: .03em; }
-  .activity-tab-top svg, .activity-tab-description { display: none; }
+  .activity-tab-description { display: none; }
   .activity-tab-title { font-size: 15px; line-height: 1.6; word-break: keep-all; }
   .activity-tab-bottom { margin-top: 14px; padding-top: 10px; }
   .activity-tab-bottom > span:first-child { display: none; }
   .activity-tab-bottom > span:last-child { font-size: 18px; }
   .activity-panel { padding: 22px; border-radius: 11px; margin-top: 16px; }
   .activity-panel-intro h3 { font-size: 22px; }
-  .activity-panel-intro > p { font-size: 11px; }
+  .activity-panel-intro .activity-panel-description { font-size: 13px; }
   .activity-feature { grid-template-columns: 1fr; }
   .activity-feature-image { min-height: 0; aspect-ratio: 1.55; }
   .activity-feature-body { padding: 22px; }
@@ -253,7 +224,6 @@
 
 /* Keep small reading text legible on the pale surfaces. */
 .activity-section .activity-kicker,
-.activity-section-heading > p span,
 .activity-tab:not(.is-active) .activity-tab-top > span,
 .activity-tab:not(.is-active) .activity-tab-description,
 .activity-tab:not(.is-active) .activity-tab-bottom,
