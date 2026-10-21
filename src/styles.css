@@ -1357,6 +1357,34 @@ body {
   transform-origin: center bottom;
 }
 
+/* Selected works share one card layout; the event plan uses the project accent. */
+.works .works-grid { gap: 28px; }
+.works .selected-work-card { align-self: start; min-width: 0; margin: 0; padding: 20px 20px 24px; border: 1px solid #ccdbe5; border-radius: 14px; background: #f1f6f9; transition: transform .55s cubic-bezier(.22,.61,.36,1), box-shadow .5s ease, border-color .4s ease; }
+.works .selected-work-card:nth-child(2) { margin-top: 95px; }
+.works .selected-work-card:nth-child(3) { margin-top: -22px; }
+.works .selected-work-card:nth-child(4) { margin-top: 65px; }
+.works .selected-work-card .selected-work-thumbnail { border-radius: 6px; }
+.works .selected-work-card h3 { margin-bottom: 16px; line-height: 1.5; word-break: keep-all; }
+.works .selected-work-card .career-tags { margin: 0; }
+.works .selected-work-card.work-featured { background: #192e3e; border-color: #375b73; box-shadow: 0 12px 30px #243f5314; }
+.works .work-featured h3 { color: #f2f7fa; }
+.works .work-featured .work-meta { color: #b9d2e2; }
+.works .work-featured .career-tags li { background: #294356; color: #d2e3ed; }
+.works .selected-work-card:focus-visible { outline: 3px solid #608dad; outline-offset: 5px; }
+@media (hover: hover) and (pointer: fine) {
+  .works .selected-work-card:hover { transform: translateY(-5px) scale(1.025); border-color: #819db3; box-shadow: 0 16px 32px #243f531a; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .works .selected-work-card { transition: transform .45s ease, box-shadow .45s ease, border-color .4s ease !important; }
+}
+@media (prefers-reduced-motion: reduce) and (hover: hover) and (pointer: fine) {
+  .works .selected-work-card:hover { transform: scale(1.015); }
+}
+@media (max-width: 760px) {
+  .works .works-grid { gap: 20px; }
+  .works .selected-work-card:nth-child(n) { margin: 0; padding: 16px 16px 20px; }
+}
+
 /* Mobile hero stacks vertically with space reserved for its content. */
 @media (max-width: 760px) {
   .top-dark .hero {

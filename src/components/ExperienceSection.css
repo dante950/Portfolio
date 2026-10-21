@@ -4,6 +4,13 @@
 .experience-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .experience-card { display: grid; grid-template-rows: subgrid; grid-row: span 6; row-gap: 0; min-width: 0; padding: 27px 24px 22px; border: 1px solid #ccdbe5; border-radius: 14px; background: #f1f6f9; color: #253c4e; transition: transform .55s cubic-bezier(.22,.61,.36,1), box-shadow .5s ease, border-color .4s ease; }
 .experience-number { font: 600 10px/1.5 Manrope, sans-serif; letter-spacing: .07em; color: #5c7a92; }
+.experience-card.experience-card-featured { background: #192e3e; border-color: #375b73; color: #f2f7fa; box-shadow: 0 12px 30px #243f5314; }
+.experience-card-featured .experience-number { color: #b9d2e2; }
+.experience-card-featured .career-tags li { background: #294356; color: #d2e3ed; }
+.experience-card.experience-card-featured h3 { color: #f2f7fa; }
+.experience-card.experience-card-featured > p { color: #c0d1de; }
+.experience-card-featured > p strong { color: #f2f7fa; font-weight: 600; }
+.experience-card-featured .experience-open { border-color: #3a5366; color: #e4f0f7; font-weight: 600; }
 .experience-monogram { display: grid; place-items: center; width: 56px; height: 56px; margin: 26px 0 22px; border: 1px solid #c4d8e7; border-radius: 13px; background: #e3eef6; color: #537c9a; font: 600 12px/1.5 Manrope, sans-serif; letter-spacing: .03em; }
 .experience-card h3 { margin: 0 0 14px; font-size: 20px; line-height: 1.5; letter-spacing: -.045em; font-weight: 600; word-break: keep-all; }
 .experience-monogram-image { position: relative; overflow: hidden; background: #182a3a; }
@@ -26,6 +33,7 @@
 @media (max-width: 760px) {
   .career.experience-section { padding-bottom: 55px !important; }
   .experience-section .section-head { align-items: flex-start; }
+  .experience-section .section-head { flex-wrap: wrap; }
   .experience-card { padding: 24px; }
 }
 @media (max-width: 520px) { .experience-grid { grid-template-columns: 1fr; } }

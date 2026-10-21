@@ -1,13 +1,14 @@
 import { planningStudies } from "./planning";
 
-export const workTypes = ["기획", "데이터 설계", "공간 분석", "게임 분석"] as const;
+export const workTypes = ["기획", "데이터 설계", "게임 분석"] as const;
 export type WorkType = (typeof workTypes)[number];
+export type WorkTag = WorkType | "레벨 분석";
 export interface WorkItem {
   id: string;
   project: string;
   title: string;
   thumbnail: string;
-  types: WorkType[];
+  types: WorkTag[];
   summary?: string;
   details?: { label: string; value: string }[];
   heroImage?: string;
@@ -30,7 +31,7 @@ const workItems: WorkItem[] = [
     title: ["맙소사 벌써 종강이라니 이벤트 기획", "킹덤러쉬 영웅 분석·신규 영웅 기획", "엘든링 스톰빌성 레벨 분석"][index],
     // Keep paths literal so the standalone HTML exporter can embed each image.
     thumbnail: study.image || ["/planning/semester-event-cover.png", "/placeholders/project-02.svg", "/planning/stormveil-work-cover.png"][index],
-    types: study.id === "stormveil" ? ["공간 분석", "게임 분석"] : ["기획", "데이터 설계"],
+    types: study.id === "stormveil" ? ["레벨 분석", "게임 분석"] : ["기획", "데이터 설계"],
     summary: study.description,
     details: study.id === "semester-event"
       ? [{ label: "기획 대상", value: "청강 RPG · 종강 기념 글자 수집 이벤트" }, { label: "담당 범위", value: "이벤트 흐름·보상·교환·상점·UI 기획 및 데이터 구조 설계" }, { label: "자료", value: "2024년 기획서 44쪽 · Excel 8개 시트 · JSON 8개 파일" }]

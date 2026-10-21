@@ -45,7 +45,7 @@ export default function GameCollage() {
       className="game-collage"
       ref={ref}
       role="group"
-      aria-label="프로젝트 이미지 모음"
+      aria-label="프로젝트와 기획서 이미지 모음"
     >
       <svg
         className="collage-light-trails"
@@ -119,7 +119,7 @@ export default function GameCollage() {
       </svg>
       {heroImages.slice(0, 6).map((item, index) => {
         const Tile = item.href ? "a" : "div";
-        return <Tile key={index} className={`collage-icon collage-icon-${index + 1}${item.href ? " collage-project" : ""}`} href={item.href} aria-label={item.href ? `${item.label} 프로젝트 살펴보기` : undefined} aria-hidden={item.href ? undefined : true}>
+        return <Tile key={index} className={`collage-icon collage-icon-${index + 1}${item.href ? " collage-project" : ""}${item.kind === "work" ? " collage-work" : ""}`} href={item.href} aria-label={item.href ? `${item.label} ${item.kind === "work" ? "기획서" : "프로젝트"} 살펴보기` : undefined} aria-hidden={item.href ? undefined : true}>
           <div className="collage-reveal">
             <img
               src={assetUrl(item.image)}
@@ -127,7 +127,7 @@ export default function GameCollage() {
               draggable={false}
               decoding="async"
             />
-            {item.href && <span className="collage-project-caption"><small>0{item.projectNumber ?? index + 1}</small><strong>{item.label}</strong><span aria-hidden="true">↗</span></span>}
+            {item.href && <span className="collage-project-caption">{item.kind !== "work" && <small>0{item.projectNumber ?? index + 1}</small>}<strong>{item.label}</strong><span aria-hidden="true">↗</span></span>}
           </div>
         </Tile>;
       })}

@@ -164,7 +164,7 @@ export default function HomePage() {
             </div>
             <div className="works-grid" id="works-grid">
               {projects.map((project, index) => (
-                <a className="work" key={project.id} href={`#/works/${encodeURIComponent(project.id)}`}>
+                <a className={`work selected-work-card${project.id === "semester-event" ? " work-featured" : ""}`} key={project.id} href={`#/works/${encodeURIComponent(project.id)}`}>
                   <div className="work-image selected-work-thumbnail">
                     {project.thumbnail && <img src={assetUrl(project.thumbnail)} alt={project.title + " 썸네일"} loading="lazy" />}
                   </div>

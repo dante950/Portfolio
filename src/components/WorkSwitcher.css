@@ -1,0 +1,31 @@
+/* Work details retain the full cards independently of the sticky project switcher. */
+.work-detail .work-switcher { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; width: 100%; margin: 0 0 48px; padding: 0; align-items: stretch; }
+.work-switcher .work-switcher-card { display: flex; flex-direction: column; min-width: 0; padding: 22px 24px 18px; border: 1px solid #ccd9e2; border-radius: 14px; color: #253c4e; background: #f4f8fa; text-decoration: none; transition: transform .5s cubic-bezier(.22,.61,.36,1), box-shadow .5s ease, border-color .35s ease; }
+.work-switcher-top { display: flex; align-items: center; min-height: 32px; margin-bottom: 24px; color: #536f85; font: 600 9px/1.6 Manrope, sans-serif; letter-spacing: .08em; }
+.work-switcher-title { display: block; font-size: 19px; line-height: 1.55; letter-spacing: -.045em; font-weight: 600; word-break: keep-all; margin-bottom: 22px; }
+.work-switcher-state { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: auto; padding-top: 14px; border-top: 1px solid #dbe4ea; color: #536f85; font-size: 10px; line-height: 1.6; }
+.work-switcher-state > span:last-child { font-size: 19px; line-height: 1; }
+.work-switcher .work-switcher-card.is-current { color: #f4f7f9; background: #182a3a; border-color: #182a3a; box-shadow: 0 12px 26px #1a314315; }
+.work-switcher-card.is-current .work-switcher-top, .work-switcher-card.is-current .work-switcher-state { color: #b6cede; }
+.work-switcher-card.is-current .work-switcher-state { border-color: #385062; }
+.work-switcher-card.is-current .work-switcher-state > span:last-child { font-size: 8px; }
+.work-switcher .work-switcher-card:focus-visible { outline: 3px solid #608dad; outline-offset: 5px; }
+@media (hover: hover) and (pointer: fine) {
+  .work-switcher .work-switcher-card:hover { transform: translateY(-4px) scale(1.02); border-color: #819db3; box-shadow: 0 16px 30px #243f5320; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-switcher .work-switcher-card { transition: transform .45s ease, box-shadow .45s ease !important; }
+}
+@media (prefers-reduced-motion: reduce) and (hover: hover) and (pointer: fine) {
+  .work-switcher .work-switcher-card:hover { transform: scale(1.01); }
+}
+@media (max-width: 1000px) {
+  .work-detail .work-switcher { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .work-detail .work-switcher { gap: 10px; margin-bottom: 34px; }
+  .work-switcher .work-switcher-card { padding: 15px 14px 13px; border-radius: 10px; }
+  .work-switcher-top { min-height: 0; font-size: 8px; margin-bottom: 15px; }
+  .work-switcher-title { font-size: 15px; margin-bottom: 15px; }
+  .work-switcher-state { padding-top: 11px; font-size: 9px; }
+}

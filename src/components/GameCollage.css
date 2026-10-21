@@ -80,6 +80,11 @@
 .collage-icon-5.collage-project img { image-rendering: auto; }
 .collage-icon-5 .collage-project-caption { font-size: clamp(7px, 1.5cqw, 9px); white-space: normal; }
 .collage-icon-5 .collage-project-caption small, .collage-icon-5 .collage-project-caption > span { display: none; }
+.collage-work img { image-rendering: auto; object-fit: contain; object-position: center; }
+.collage-icon-3.collage-work .collage-reveal { background: #eee; }
+.collage-icon-6.collage-work .collage-reveal { background: #10212b; }
+.collage-work .collage-project-caption { font-size: clamp(7px, 1.6cqw, 10px); }
+.collage-work .collage-project-caption > span { display: none; }
 .collage-project:focus-visible { outline: 2px solid #c0e5fa; outline-offset: 6px; }
 @media (max-width: 400px) {
   .collage-icon-2 .collage-project-caption small,
@@ -108,7 +113,7 @@
   --reveal-delay: 0.55s;
 }
 .collage-icon-3 {
-  --size: 14%;
+  --size: 19%;
   --x: 77%;
   --y: 12%;
   --depth: 2;
@@ -135,7 +140,7 @@
   --reveal-delay: 1s;
 }
 .collage-icon-6 {
-  --size: 12%;
+  --size: 19%;
   --x: 65%;
   --y: 78%;
   --depth: 2;
