@@ -132,6 +132,8 @@
   color: #26303a;
 }
 .qa-markdown a {
+  display: inline-block;
+  max-width: 100%;
   color: #426582;
   text-decoration: underline;
   text-underline-offset: 3px;

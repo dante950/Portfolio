@@ -198,7 +198,7 @@ export default function HomePage() {
               <a className="end-card" id="qa" href="#/qa">
                 <div>
                   <h3>Q&A</h3>
-                  <p>업무 경험에 대한 여러 질문과 답변</p>
+                  <p>팀 프로젝트에서 배운 점과 기획하는 방식</p>
                 </div>
                 <span>↗</span>
               </a>
